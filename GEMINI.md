@@ -99,5 +99,19 @@ Struktur Isi Konten Markdown Wajib Terdiri dari:
   - Dashboard Eksekutif (`/`)
   - Direktori 25 Inisiatif Roadmap (`/roadmap`)
   - Paket Rekomendasi Regulasi Walikota (`/regulasi`)
+  - Dampak Publik & UMKM (`/dampak-publik`)
   - Simulasi Finansial Interaktif (`/simulasi`)
   - Transformasi Kelembagaan (`/kelembagaan`)
+
+---
+
+## 6. Prinsip Keberdampakan Sektor Non-Profit & Kemaslahatan Publik (SROI BLUD)
+- **Mandat Pelayanan Publik BLUD**: Keberhasilan komersial STP wajib menjadi mesin penggerak kemaslahatan masyarakat Kota Surakarta melalui mekanisme **Subsidi Silang Terarah (Targeted Cross-Subsidization)**.
+- **4 Sektor Penerima Manfaat Utama**:
+  1. **Masyarakat Luas & Kaum Rentan**: Beasiswa vokasi inklusif (difabel & prasejahtera), literasi AI kelurahan, tele-rehabilitasi puskesmas gratis, dan ketahanan pangan pekarangan stunting.
+  2. **UMKM & Pengrajin Tradisional**: Fasilitasi gratis kurasi mutu & lab uji kemasan, proteksi HAKI motif batik/kriya gratis di muka, studio siaran live-commerce, dan onboarding E-Katalog.
+  3. **Industri Lokal & Bengkel Rakyat**: Open Living Lab uji presisi prototipe bebas sewa alat, program efisiensi energi hijau, dan transfer riset terapan kampus.
+  4. **Komunitas Kreatif & Pemuda Kota**: Co-working space gratis, inkubasi startup lokal pra-pendanaan, dan hackathon solusi perkotaan.
+- **Target SROI (Social Return on Investment)**:
+  - Rasio minimal **1 : 3,8** (Setiap Rp 1 surplus BLUD menciptakan dampak nilai sosial terukur Rp 3,8 bagi warga Surakarta), dengan total estimasi nilai manfaat publik **> Rp 120 Miliar** pada 2030.
+

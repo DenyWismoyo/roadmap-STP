@@ -54,3 +54,13 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
      - **Sirkular Ekonomi & E-Waste (Inisiatif #23)**: Daur ulang limbah elektronik & baterai EV berwawasan Net-Zero Emission.
      - **Akselerasi HAKI Kriya & Batik (Inisiatif #24)**: Proteksi motif budaya, 3D scanning, dan royalti lisensi desain industri.
      - **HealthTech & Tele-Rehabilitasi Komunitas (Inisiatif #25)**: Fabrikasi suku cadang alat medis presisi dan rujukan tele-fisioterapi warga.
+
+7. **Pilar Keberdampakan Sektor Non-Profit, UMKM & Kemaslahatan Publik (Public Value & SROI BLUD)**:
+   - Dalam setiap paparan dan analisis roadmap, STP tidak boleh diposisikan sebagai entitas komersial murni yang mengejar laba semata. Sebagai BLUD Pemerintah Kota Surakarta, keberhasilan fiskal STP wajib bermuara pada peningkatan kemaslahatan sosial-ekonomi masyarakat luas di wilayah Surakarta melalui prinsip:
+     - **Targeted Cross-Subsidization (Subsidi Silang Terarah)**: Surplus pendapatan dari inisiatif komersial korporat (R&D Retainer, GPU Cloud, Naming Rights, BGS Shopee) dialokasikan secara afirmatif untuk mendanai program pelayanan publik non-profit.
+     - **4 Matriks Penerima Manfaat Utama di Wilayah Surakarta**:
+       1. **Masyarakat Luas & Kaum Rentan**: Beasiswa vokasi inklusif 100% gratis bagi keluarga prasejahtera & difabel, program literasi AI kelurahan, tele-rehabilitasi kesehatan komunitas terintegrasi puskesmas, dan edukasi ketahanan pangan pekarangan stunting.
+       2. **UMKM & Pengrajin Tradisional**: Pendampingan kurasi mutu & uji lab kemasan gratis, proteksi HAKI motif batik/kriya tanpa biaya di muka, studio siaran live-commerce pro-bono di PLUT, serta fasilitas onboarding e-katalog LKPP.
+       3. **Industri Lokal & Bengkel Rakyat**: Open Living Lab & Regulatory Sandbox untuk uji presisi prototipe tanpa beban sewa alat, program efisiensi energi hijau, dan alih teknologi tepat guna.
+       4. **Komunitas Kreatif & Pemuda Kota**: Akses ruang co-working gratis, inkubasi startup lokal pra-pendanaan, dan hackathon inovasi solusi perkotaan.
+     - **Metrik Social Return on Investment (SROI)**: Mewajibkan pemantauan rasio SROI (ditargetkan minimal 1 : 3,8) guna membuktikan kepada Walikota dan DPRD bahwa setiap rupiah surplus BLUD menghasilkan pengganda ekonomi nyata bagi kesejahteraan warga Surakarta.

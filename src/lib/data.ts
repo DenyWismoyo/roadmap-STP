@@ -1,4 +1,10 @@
-import { HistoricalBudgetData, ScenarioYearData, RegulatoryWave } from "./types";
+import {
+  HistoricalBudgetData,
+  ScenarioYearData,
+  RegulatoryWave,
+  PublicImpactSector,
+  SROIBreakdown,
+} from "./types";
 
 export const HISTORICAL_BUDGET: HistoricalBudgetData[] = [
   { year: 2021, apbd: 6928997378, blud: 3382000000, total: 10310977378, pctApbd: 67.20, pctBlud: 32.80, note: "Subsidi dominan APBD" },
@@ -331,3 +337,192 @@ export function formatRupiah(amount: number, compact = false): string {
     maximumFractionDigits: 0,
   }).format(amount);
 }
+
+export const PUBLIC_IMPACT_SECTORS: PublicImpactSector[] = [
+  {
+    id: "warga-rentan",
+    title: "Masyarakat Luas & Kaum Rentan",
+    badge: "Inklusi & Kesejahteraan",
+    icon: "HeartHandshake",
+    color: "from-rose-500 to-pink-600",
+    targetGroup: "Keluarga Prasejahtera, Penyandang Disabilitas, Ibu Hamil & Lansia Surakarta",
+    description:
+      "Transformasi teknologi yang memanusiakan warga: memastikan kemajuan AI, digitalisasi, dan kesehatan modern dapat dinikmati oleh seluruh lapisan masyarakat Surakarta tanpa terhalang kendala ekonomi.",
+    annualValueEstimate: 38000000000,
+    keyMetrics: [
+      { label: "Penerima Beasiswa Vokasi Presisi", value: "850 Orang/thn", target2030: "3.500+ Penerima" },
+      { label: "Talenta Disabilitas Mandiri AI & IT", value: "300 Difabel/thn", target2030: "1.200+ Diserap Kerja" },
+      { label: "Warga Terlayani Tele-Rehabilitasi Medis", value: "4.500 Pasien/thn", target2030: "20.000+ Sesi Gratis" },
+      { label: "Keluarga Edukasi Urban Farming Stunting", value: "1.200 KK/thn", target2030: "5.000+ Rumah Tangga" },
+    ],
+    programs: [
+      {
+        name: "Solo Inclusive Tech Academy (100% Beasiswa)",
+        type: "100% Pro-Bono (Gratis)",
+        mechanism: "Pelatihan coding intensif, data labeling AI, dan sertifikasi BNSP khusus bagi anak prasejahtera & difabel sensorik/fisik.",
+        civicImpact: "Meningkatkan pendapatan keluarga rentan dari garis kemiskinan menjadi Rp 4,5M - 6M/bulan di industri teknologi.",
+        crossSubsidizedBy: "Surplus Pendapatan Solo AI Exchange (#20) & SME Retainer (#2)",
+      },
+      {
+        name: "Tele-Rehabilitasi & Fisioterapi Komunitas Puskesmas",
+        type: "100% Pro-Bono (Gratis)",
+        mechanism: "Layanan konsultasi tele-fisioterapi dan peminjaman alat bantu ortotik-prostetik buatan lab biomedis STP untuk warga tidak mampu.",
+        civicImpact: "Mengurangi biaya terapi mandiri warga hingga Rp 2,5 Juta/bulan per pasien pasca-stroke atau cedera.",
+        crossSubsidizedBy: "Retribusi Zona Komersial RS Kardiologi (#11) & Solo HealthTech Hub (#25)",
+      },
+      {
+        name: "Pekarangan Pangan Bergizi Smart Kelurahan",
+        type: "Akses Terbuka Publik",
+        mechanism: "Instalasi modul micro-greenhouse hidroponik IoT dan bibit kultur jaringan gratis di 54 kelurahan se-Kota Surakarta.",
+        civicImpact: "Menurunkan angka prevalensi stunting kelurahan dan menghemat pengeluaran belanja sayur rumah tangga hingga 20%.",
+        crossSubsidizedBy: "Solo Urban Agritech Hub (#22) & Sentra Energi Hijau (#15)",
+      },
+    ],
+  },
+  {
+    id: "umkm-pengrajin",
+    title: "UMKM & Pengrajin Tradisional",
+    badge: "Ekonomi Kerakyatan & Budaya",
+    icon: "Store",
+    color: "from-amber-500 to-orange-600",
+    targetGroup: "Pelaku Usaha Mikro, Pengrajin Batik, Kriya Logam/Kayu & Kuliner Tradisional Solo",
+    description:
+      "Perlindungan dan akselerasi daya saing produk lokal: membekali pelaku ekonomi akar rumput dengan fasilitas sertifikasi, pengujian laboratorium, dan etalase digital kelas dunia secara pro-bono.",
+    annualValueEstimate: 45000000000,
+    keyMetrics: [
+      { label: "UMKM Difasilitasi Lab Uji Kemasan & Mutu", value: "1.500 Produk/thn", target2030: "6.000+ Produk Standar" },
+      { label: "Motif Batik & Desain Kriya Ber-HAKI", value: "450 Motif/thn", target2030: "2.000+ Hak Cipta Resmi" },
+      { label: "UMKM Lolos Kurasi E-Katalog Nasional", value: "350 Usaha/thn", target2030: "1.500+ Rekanan Terverifikasi" },
+      { label: "Kenaikan Omzet Rata-rata Pelaku Binaan", value: "+45% per Tahun", target2030: "> 2,5x Lipat Omzet" },
+    ],
+    programs: [
+      {
+        name: "Klinik HAKI Pro-Bono & Proteksi Motif Budaya",
+        type: "100% Pro-Bono (Gratis)",
+        mechanism: "Pendampingan pendaftaran Hak Cipta & Desain Industri motif batik tulis serta kriya khas Solo tanpa biaya registrasi di muka.",
+        civicImpact: "Mencegah pembajakan motif asli Surakarta oleh pihak luar serta memberi kepastian nilai royalti bagi perajin sepuh.",
+        crossSubsidizedBy: "Solo Creative IP & Craft Digitalization Lab (#24)",
+      },
+      {
+        name: "Fasilitasi Studio Siaran Live-Commerce PLUT STP",
+        type: "Akses Terbuka Publik",
+        mechanism: "Penyediaan 8 bilik studio siaran live-shopping berkecepatan gigabit lengkap dengan operator kamera & kurator produk.",
+        civicImpact: "Meningkatkan omzet harian UMKM mikro kuliner dan fashion hingga 300% melalui pasar marketplace nasional.",
+        crossSubsidizedBy: "Komersialisasi Hub PLUT KUMKM (#12) & Marketing Agency STP (#4)",
+      },
+      {
+        name: "Uji Lab Mutu Kemasan Pangan & Pendampingan Sertifikasi Halal",
+        type: "Subsidi Silang 70–90%",
+        mechanism: "Uji ketahanan kemasan retort pouch, vacuum sealing, dan barcode traceability gratis dengan hanya biaya bahan habis pakai minimum.",
+        civicImpact: "Membuat produk oleh-oleh tradisional Solo mampu menembus rak supermarket modern dan ekspor tanpa risiko basi.",
+        crossSubsidizedBy: "Komersialisasi E-Catalog BLUD (#8) & R&D As a Service (#17)",
+      },
+    ],
+  },
+  {
+    id: "industri-kampus",
+    title: "Industri Lokal & Bengkel Rakyat",
+    badge: "Kemandirian Manufaktur & Riset",
+    icon: "Cpu",
+    color: "from-cyan-500 to-blue-600",
+    targetGroup: "Bengkel Bubut/Las Rakyat, IKM Manufaktur Cor Logam Ceper/Solo, & Peneliti Kampus",
+    description:
+      "Demokratisasi fasilitas teknologi canggih: membuka akses ke mesin CNC mikron, 3D metal printing, dan lab kalibrasi bagi bengkel rakyat agar naik kelas menjadi rantai pasok industri nasional.",
+    annualValueEstimate: 25000000000,
+    keyMetrics: [
+      { label: "Bengkel Rakyat Mengakses CNC Presisi STP", value: "240 Bengkel/thn", target2030: "1.000+ Bengkel Presisi" },
+      { label: "Prototipe Teknologi Riset Terhilirisasi", value: "35 Prototipe/thn", target2030: "150+ Inovasi Pasar" },
+      { label: "Tenaga Mekanik Bersertifikat K3 & Presisi", value: "600 Orang/thn", target2030: "2.500+ Teknisi Ahli" },
+      { label: "Efisiensi Energi Industri Binaan", value: "22% Penghematan", target2030: "Net-Zero Koridor Solo" },
+    ],
+    programs: [
+      {
+        name: "Open Living Lab & Prototyping Sandbox",
+        type: "Akses Terbuka Publik",
+        mechanism: "Waktu sewa gratis mesin perkakas presisi 5-axis untuk inovator lokal yang sedang mematangkan prototipe alat tepat guna.",
+        civicImpact: "Memangkas biaya litbang inovator daerah dari ratusan juta rupiah menjadi hampir nol hingga tahap uji fungsi.",
+        crossSubsidizedBy: "Corporate Academy Retainer (#1) & Eks AK-Tekstil Facility (#10)",
+      },
+      {
+        name: "Klinik Efisiensi Energi & Audit Karbon IKM",
+        type: "Subsidi Silang 70–90%",
+        mechanism: "Bantuan audit kelistrikan dan instalasi solar inverter terjangkau bagi kluster bengkel manufaktur logam.",
+        civicImpact: "Menyelamatkan operasional bengkel lokal dari lonjakan tarif dasar listrik dan mengurangi beban jejak karbon kota.",
+        crossSubsidizedBy: "Sentra Energi Hijau: SPKLU & PLTS Atap (#15)",
+      },
+    ],
+  },
+  {
+    id: "komunitas-pemuda",
+    title: "Komunitas Kreatif & Pemuda Kota",
+    badge: "Ekosistem Inovasi Masa Depan",
+    icon: "Rocket",
+    color: "from-purple-500 to-indigo-600",
+    targetGroup: "Komunitas Kreatif, Developer Muda, Perintis Startup Lokal, Mahasiswa & Pelajar Solo",
+    description:
+      "Menjadikan Solo Technopark sebagai rumah bersama bagi anak muda berkarya: menyediakan infrastruktur komputasi awan, co-working gratis, dan inkubator inovasi solusi perkotaan.",
+    annualValueEstimate: 16000000000,
+    keyMetrics: [
+      { label: "Aktivasi Co-working Gratis Komunitas", value: "12.000 Kunjungan/thn", target2030: "50.000+ Pemuda Aktif" },
+      { label: "Startup Lokal Terinkubasi Pra-Seed", value: "25 Tim/thn", target2030: "100+ Startup Mandiri" },
+      { label: "Civic Hackathon Solusi Perkotaan", value: "4 Event/thn", target2030: "20 Aplikasi Layanan Publik" },
+      { label: "Komunitas Kreatif Aktif Berjejaring", value: "80 Komunitas/thn", target2030: "250+ Komunitas Kreatif" },
+    ],
+    programs: [
+      {
+        name: "Public Civic Co-Working & Maker Space",
+        type: "100% Pro-Bono (Gratis)",
+        mechanism: "Akses internet gigabit, meja kerja ergonomis, dan lab IoT gratis untuk pelajar, mahasiswa, dan komunitas nirlaba Solo.",
+        civicImpact: "Mencegah brain drain talenta muda keluar Solo dan menumbuhkan ekosistem ekonomi digital akar rumput.",
+        crossSubsidizedBy: "Virtual Office & Co-Working Hub Komersial (#6) & Naming Rights (#13)",
+      },
+      {
+        name: "Solo Urban Problem-Solving Hackathon",
+        type: "100% Pro-Bono (Gratis)",
+        mechanism: "Kompetisi tahunan berhadiah pendanaan benih bagi tim pemuda yang merancang solusi sampah, macet, atau ketahanan pangan kota.",
+        civicImpact: "Menghasilkan prototipe aplikasi cerdas warga yang langsung diintegrasikan ke dalam ekosistem Solo Civic OS.",
+        crossSubsidizedBy: "Solo GovTech Hub (#19) & Videotron Reklame Digital (#18)",
+      },
+    ],
+  },
+];
+
+export const SROI_BREAKDOWN: SROIBreakdown[] = [
+  {
+    component: "Beasiswa & Pelatihan Vokasi Inklusif Difabel / Kaum Rentan",
+    surplusInvestment: 8500000000,
+    socialValueCreated: 38000000000,
+    sroiRatio: 4.47,
+    description: "Nilai kenaikan pendapatan seumur hidup penerima beasiswa kerja IT & pengurangan tanggungan bansos kemiskinan Pemkot.",
+  },
+  {
+    component: "Fasilitasi HAKI, Lab Uji Mutu & Live-Commerce UMKM Tradisional",
+    surplusInvestment: 11000000000,
+    socialValueCreated: 45000000000,
+    sroiRatio: 4.09,
+    description: "Lonjakan omzet produk batik, kriya, kuliner lokal serta proteksi royalti desain yang terselamatkan dari klaim luar.",
+  },
+  {
+    component: "Open Living Lab, Uji Presisi Mikron & Efisiensi Energi IKM Logam",
+    surplusInvestment: 7500000000,
+    socialValueCreated: 25000000000,
+    sroiRatio: 3.33,
+    description: "Penghematan biaya riset prototipe mandiri, peningkatan akurasi suku cadang, dan efisiensi tagihan listrik bengkel.",
+  },
+  {
+    component: "Ruang Kreatif Pemuda, Co-working Gratis & Inkubasi Startup Solusi Kota",
+    surplusInvestment: 5500000000,
+    socialValueCreated: 16000000000,
+    sroiRatio: 2.91,
+    description: "Pencegahan brain-drain generasi muda, pembentukan lapangan kerja digital baru, dan lahirnya aplikasi publik.",
+  },
+];
+
+export const SROI_SUMMARY = {
+  totalSurplusInvested: 32500000000,
+  totalSocialValueCreated: 124000000000,
+  aggregateSroiRatio: 3.82,
+  periodTarget: "2026 – 2030",
+  basisAudit: "Permendagri No. 79/2018 tentang BLUD Pasal 34 (Pelayanan Publik Berbasis Mutu) & Metodologi SROI Global",
+};
+

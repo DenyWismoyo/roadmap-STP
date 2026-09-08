@@ -71,3 +71,35 @@ export interface RegulatoryWave {
     legalShield: string;
   }[];
 }
+
+export interface PublicImpactSector {
+  id: string;
+  title: string;
+  badge: string;
+  icon: string;
+  color: string;
+  targetGroup: string;
+  description: string;
+  annualValueEstimate: number;
+  keyMetrics: {
+    label: string;
+    value: string;
+    target2030: string;
+  }[];
+  programs: {
+    name: string;
+    type: "100% Pro-Bono (Gratis)" | "Subsidi Silang 70–90%" | "Akses Terbuka Publik";
+    mechanism: string;
+    civicImpact: string;
+    crossSubsidizedBy: string;
+  }[];
+}
+
+export interface SROIBreakdown {
+  component: string;
+  surplusInvestment: number;
+  socialValueCreated: number;
+  sroiRatio: number;
+  description: string;
+}
+

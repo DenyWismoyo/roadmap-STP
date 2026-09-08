@@ -70,9 +70,12 @@ export default function Footer() {
                   SMK Go Global BP3MI (Rp 5,0 M) <ArrowUpRight className="w-3 h-3 text-slate-500" />
                 </Link>
               </li>
-              <li className="pt-2 border-t border-white/10">
+              <li className="pt-2 border-t border-white/10 space-y-1.5">
                 <Link href="/regulasi" className="text-amber-400 hover:text-amber-300 font-bold transition-colors flex items-center gap-1">
                   Paket Regulasi Walikota <ArrowUpRight className="w-3 h-3 text-amber-500" />
+                </Link>
+                <Link href="/dampak-publik" className="text-rose-400 hover:text-rose-300 font-bold transition-colors flex items-center gap-1">
+                  Dampak Publik & SROI (Rp 124 M) <ArrowUpRight className="w-3 h-3 text-rose-500" />
                 </Link>
               </li>
             </ul>

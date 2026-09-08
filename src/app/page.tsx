@@ -7,6 +7,7 @@ import {
   Layers,
   ArrowRight,
   Gavel,
+  HeartHandshake,
 } from "lucide-react";
 import { getAllRoadmaps } from "@/lib/markdown";
 import { CLUSTERS } from "@/lib/data";
@@ -23,40 +24,35 @@ export default function HomePage() {
   return (
     <div className="space-y-20 pb-24">
       {/* HERO PRESENTASI WALIKOTA */}
-      <section className="relative pt-12 sm:pt-20 pb-16 app-container overflow-hidden">
-        {/* Luminous Glow Ambient Light */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[500px] bg-radial-glow opacity-80 pointer-events-none" />
+      <section className="relative pt-12 pb-8 overflow-hidden">
+        {/* Glow ambient background effects */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-blue-600/20 via-cyan-500/15 to-emerald-500/15 blur-[120px] rounded-full pointer-events-none -z-10" />
 
-        <div className="relative z-10 text-center max-w-5xl mx-auto space-y-7">
-          {/* Executive Tagline Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/70 border border-cyan-500/40 text-cyan-300 text-xs font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(6,182,212,0.25)]">
+        <div className="app-container space-y-8 text-center relative z-10">
+          {/* Executive Tag */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/40 text-cyan-300 text-xs font-bold tracking-wider uppercase shadow-[0_0_20px_rgba(6,182,212,0.25)]">
             <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            Paparan Kebijakan Walikota Surakarta • Kemandirian Fiskal 100% BLUD
+            Paparan Strategis Walikota Surakarta • Road to BLUD Mandiri 2030
           </div>
 
-          {/* Main Presentation Title */}
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white tracking-tight leading-[1.12]">
-            Roadmap Strategis Optimalisasi Pendapatan & Kemandirian BLUD{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-teal-300 bg-clip-text text-transparent">
+          {/* Main Hero Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15] max-w-5xl mx-auto">
+            Transformasi Kemandirian Fiskal & Akselerasi Ekosistem Riset Terapan{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400">
               Solo Technopark
-            </span>{" "}
-            (2026–2030)
+            </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-4xl mx-auto leading-relaxed font-normal">
-            Menjawab mandat pimpinan daerah untuk sustain tanpa belanja APBD melalui unlocking aset tidur (Shopee, Eks AK-Tekstil, RS Kardiologi, PLUT), Naming Rights, AI Tech Hub, dan Green Energy guna mencapai{" "}
-            <span className="text-white font-bold underline decoration-cyan-400 underline-offset-4">
-              target agregat Rp 50,5 Miliar/tahun
-            </span>{" "}
-            dengan perlindungan kepatuhan hukum BLUD paripurna.
+          {/* Executive Subtitle */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+            Peta jalan komprehensif melepaskan ketergantungan belanja APBD Kota Surakarta (0% subsidi rutin), mengeliminasi potensi defisit Rp 2,4 M pasca-Pertamina, dan mewujudkan ekosistem inovasi berpendapatan hingga <strong className="text-emerald-400">Rp 50,5 M – 67,5 Miliar</strong> per tahun pada 2030.
           </p>
 
-          {/* Quick CTA Buttons */}
-          <div className="flex flex-wrap items-center justify-center gap-3.5 pt-4">
+          {/* Action Callouts */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/regulasi"
-              className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 active:scale-95 text-slate-950 font-black text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(245,158,11,0.4)] transition-all flex items-center gap-2"
+              className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all flex items-center gap-2"
             >
               <Gavel className="w-4 h-4 text-slate-950" />
               Paket Regulasi Walikota
@@ -68,6 +64,14 @@ export default function HomePage() {
             >
               <Layers className="w-4 h-4" />
               25 Inisiatif Roadmap
+            </Link>
+
+            <Link
+              href="/dampak-publik"
+              className="px-6 py-3.5 rounded-2xl bg-rose-950/70 hover:bg-rose-900/80 text-rose-200 hover:text-white font-bold text-xs uppercase tracking-wider border border-rose-500/40 shadow-lg transition-all flex items-center gap-2"
+            >
+              <HeartHandshake className="w-4 h-4 text-rose-400" />
+              Dampak Publik & UMKM
             </Link>
 
             <Link
@@ -145,6 +149,30 @@ export default function HomePage() {
               Ditutup penuh oleh pendapatan mandiri BLUD
             </div>
           </div>
+        </div>
+
+        {/* EXECUTIVE CIVIC & SROI IMPACT HIGHLIGHT BANNER */}
+        <div className="mt-8 -mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-rose-950/70 via-slate-900/90 to-blue-950/70 border-y sm:border-x border-rose-500/30 shadow-[0_0_30px_rgba(244,63,94,0.15)] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-950/80 border border-rose-500/30 text-rose-300 text-xs font-bold uppercase tracking-wider">
+              <HeartHandshake className="w-3.5 h-3.5 text-rose-400" />
+              SROI 1 : 3,82 • Kemaslahatan Publik & Sektor Non-Profit
+            </div>
+            <h3 className="text-xl sm:text-2xl font-black text-white">
+              Surplus Komersial BLUD Dialirkan untuk Kesejahteraan Warga & UMKM Surakarta
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-3xl leading-relaxed">
+              Kemandirian 100% tanpa APBD digunakan untuk mendanai beasiswa vokasi inklusif difabel, klinik HAKI batik gratis, lab uji mutu UMKM, dan open living lab bengkel rakyat senilai <strong className="text-emerald-400">Rp 124 Miliar / tahun</strong>.
+            </p>
+          </div>
+
+          <Link
+            href="/dampak-publik"
+            className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-500 hover:to-pink-500 text-white font-bold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(244,63,94,0.4)] transition-all shrink-0 flex items-center gap-2"
+          >
+            Pelajari Kerangka SROI
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 

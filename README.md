@@ -51,7 +51,22 @@ Model bisnis yang dipaparkan dalam roadmap ini dirancang secara *audit-proof* (a
 
 ---
 
+## 🤝 Sektor Non-Profit & Kemaslahatan Publik (SROI 1 : 3,82)
+
+Solo Technopark mengalirkan surplus komersial BLUD melalui skema **Targeted Cross-Subsidization (Subsidi Silang Terarah)** untuk mendanai program pelayanan publik non-profit di wilayah Surakarta:
+
+| Sektor Penerima Manfaat | Program Unggulan Pro-Bono | Nilai Manfaat Sosial (2030) |
+| :--- | :--- | :---: |
+| **❤️ Masyarakat & Kaum Rentan** | Beasiswa 100% vokasi difabel/prasejahtera, tele-rehabilitasi puskesmas, smart urban farming stunting | **Rp 38,0 M / thn** |
+| **🏪 UMKM & Pengrajin Tradisional** | Uji mutu lab kemasan gratis, proteksi HAKI motif batik/kriya tanpa biaya di muka, studio live-commerce PLUT | **Rp 45,0 M / thn** |
+| **⚙️ Industri Lokal & Bengkel Rakyat** | Open Living Lab mesin perkakas CNC presisi bebas sewa, klinik efisiensi energi hijau, alih riset kampus | **Rp 25,0 M / thn** |
+| **🚀 Komunitas Kreatif & Pemuda** | Co-working space & maker lab gratis, civic hackathon solusi perkotaan, inkubasi startup lokal pra-seed | **Rp 16,0 M / thn** |
+| **TOTAL NILAI PUBLIK TERUKUR** | **Investasi Surplus: Rp 32,5 M/thn → Nilai Kemanfaatan: Rp 124 Miliar/thn (Rasio SROI 1 : 3,82)** | **Rp 124,0 M / thn** |
+
+---
+
 ## 💻 Tech Stack & Arsitektur
+
 
 - **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
 - **UI Library**: [React 19](https://react.dev/)

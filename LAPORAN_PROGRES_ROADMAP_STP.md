@@ -63,9 +63,18 @@ Seluruh 25 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps
 - **Pengalaman Desktop Layar Penuh (Fullscreen Fluid)**: Tata letak dinamis `.app-container` yang memanfaatkan resolusi monitor lebar dan proyektor rapat eksekutif secara proporsional.
 - **Simulator Finansial Interaktif**: Menyajikan simulasi multi-skenario (Baseline, Konservatif 90%, Progresif 75%, Agresif 60%) secara *real-time* untuk estimasi surplus kas dan dividen PAD.
 
-### D. Pengujian Teknis (Build & Validation)
+### D. Modul Baru: Kemaslahatan Publik, UMKM & Sektor Non-Profit (`/dampak-publik`)
+- **Peta Alur Subsidi Silang Terarah (Targeted Cross-Subsidization)**: Visualisasi transparan bagaimana surplus komersial BLUD dari korporat dialirkan membiayai program non-profit warga.
+- **Matriks 4 Sektor Penerima Manfaat**:
+  1. *Masyarakat & Kaum Rentan*: Beasiswa vokasi inklusif difabel, tele-rehabilitasi puskesmas, dan urban agritech penanganan stunting (Rp 38 M).
+  2. *UMKM & Pengrajin Tradisional*: Uji mutu lab kemasan, proteksi HAKI motif batik/kriya gratis di muka, dan studio live-commerce PLUT (Rp 45 M).
+  3. *Industri Lokal & Bengkel Rakyat*: Open Living Lab mesin perkakas CNC presisi bebas sewa dan efisiensi energi hijau (Rp 25 M).
+  4. *Komunitas Kreatif & Pemuda*: Co-working space gratis dan civic hackathon solusi perkotaan (Rp 16 M).
+- **Kalkulasi SROI (Social Return on Investment)**: Rasio **1 : 3,82**, menciptakan nilai manfaat sosial **Rp 124 Miliar / tahun** dari investasi surplus Rp 32,5 Miliar.
+
+### E. Pengujian Teknis (Build & Validation)
 - **Audit Skrip & Formula Keuangan**: Skrip `audit_roadmaps.js` memastikan 25 inisiatif presisi (8 Baseline = Rp 28,0 M, 17 Terobosan = Rp 39,5 M, Grand Total Horizon = Rp 67,5 M).
-- **Next.js Production Build**: Lulus 100% tanpa error (`next build`, 31+ rute statis diprerender sempurna).
+- **Next.js Production Build**: Lulus 100% tanpa error (`next build`, 34 rute statis diprerender sempurna).
 
 ---
 

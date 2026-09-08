@@ -13,6 +13,7 @@ import {
   X,
   Sparkles,
   Gavel,
+  HeartHandshake,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -20,11 +21,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Executive Dashboard", icon: Sparkles },
+    { href: "/", label: "Dashboard", icon: Sparkles },
     { href: "/roadmap", label: "25 Inisiatif Roadmap", icon: Compass },
     { href: "/regulasi", label: "Paket Regulasi Walikota", icon: Gavel },
-    { href: "/simulasi", label: "Simulasi Finansial 2026–2030", icon: TrendingUp },
-    { href: "/kelembagaan", label: "Transformasi Kelembagaan", icon: Landmark },
+    { href: "/dampak-publik", label: "Dampak Publik & UMKM", icon: HeartHandshake },
+    { href: "/simulasi", label: "Simulasi Finansial", icon: TrendingUp },
+    { href: "/kelembagaan", label: "Kelembagaan", icon: Landmark },
   ];
 
   return (
