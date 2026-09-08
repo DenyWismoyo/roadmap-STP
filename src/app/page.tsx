@@ -67,7 +67,7 @@ export default function HomePage() {
               className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(37,99,235,0.4)] transition-all flex items-center gap-2"
             >
               <Layers className="w-4 h-4" />
-              18 Inisiatif Roadmap
+              20 Inisiatif Roadmap
             </Link>
 
             <Link
@@ -96,11 +96,11 @@ export default function HomePage() {
               <span>Target Agregat 2030</span>
               <TrendingUp className="w-4 h-4 text-cyan-400" />
             </div>
-            <div className="text-3xl lg:text-4xl font-black text-white my-2 font-mono">
-              Rp 50,5 M
+            <div className="text-2xl lg:text-3xl font-black text-white my-2 font-mono">
+              Rp 50,5M - 57,5M
             </div>
             <div className="text-xs text-slate-400 leading-relaxed">
-              Rp 28 M Baseline + Rp 22,5 M Terobosan Baru
+              Rp 28 M Baseline + Rp 29,5 M Terobosan Baru
             </div>
           </div>
 
@@ -125,10 +125,10 @@ export default function HomePage() {
               <Layers className="w-4 h-4 text-amber-400" />
             </div>
             <div className="text-3xl lg:text-4xl font-black text-white my-2 font-mono">
-              18 Program
+              20 Program
             </div>
             <div className="text-xs text-slate-400 leading-relaxed">
-              10 Terobosan Agresif + 8 Inisiatif Baseline
+              12 Terobosan Agresif + 8 Inisiatif Baseline
             </div>
           </div>
 
@@ -263,7 +263,7 @@ export default function HomePage() {
                 href="/roadmap"
                 className="px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider border border-white/20 transition-all shadow-md"
               >
-                Direktori 18 Roadmap
+                Direktori 20 Roadmap
               </Link>
             </div>
           </div>

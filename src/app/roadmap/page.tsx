@@ -4,9 +4,9 @@ import RoadmapClient from "./RoadmapClient";
 import { Compass } from "lucide-react";
 
 export const metadata = {
-  title: "Direktori 18 Inisiatif Roadmap BLUD Solo Technopark 2026–2030",
+  title: "Direktori 20 Inisiatif Roadmap BLUD Solo Technopark 2026–2030",
   description:
-    "Eksplorasi lengkap 18 inisiatif dokumen roadmap UPTD KST Solo Technopark berbasis Markdown (.md), target Rp 50,5 Miliar.",
+    "Eksplorasi lengkap 20 inisiatif dokumen roadmap UPTD KST Solo Technopark berbasis Markdown (.md), target Rp 50,5 M s.d. Rp 57,5 Miliar.",
 };
 
 export default function RoadmapDirectoryPage() {
@@ -21,10 +21,10 @@ export default function RoadmapDirectoryPage() {
           Arsip Dokumen Strategis (.md)
         </div>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          Direktori 18 Inisiatif Roadmap Strategis
+          Direktori 20 Inisiatif Roadmap Strategis
         </h1>
         <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
-          Seluruh berkas dokumen disimpan dalam format Markdown (.md) terstruktur. Terbagi atas 8 Inisiatif Baseline (Rp 28,0 M) dan 10 Inisiatif Terobosan Agresif Unlocking Aset (Rp 22,5 M) untuk mencapai skala penuh Rp 50,5 Miliar per tahun pada 2030.
+          Seluruh berkas dokumen disimpan dalam format Markdown (.md) terstruktur. Terbagi atas 8 Inisiatif Baseline (Rp 28,0 M) dan 12 Inisiatif Terobosan Agresif (Rp 29,5 M) untuk mencapai target horizon skala penuh Rp 57,5 Miliar per tahun pada 2030.
         </p>
       </div>
 

@@ -69,12 +69,13 @@ const grandTotal = baselineTotal + aggressiveTotal;
 console.log(`\n------------------------------------------------------`);
 console.log(`📊 REKAPITULASI TARGET PENDAPATAN STRATEGIS:`);
 console.log(`- Total 8 Baseline Inisiatif   : Rp ${baselineTotal.toLocaleString('id-ID')} (Target: Rp 28.000.000.000)`);
-console.log(`- Total 10 Terobosan Agresif   : Rp ${aggressiveTotal.toLocaleString('id-ID')} (Target: Rp 22.500.000.000)`);
-console.log(`- TOTAL AGREGAT MAKSIMAL 2030  : Rp ${grandTotal.toLocaleString('id-ID')} (Target: Rp 50.500.000.000)`);
+console.log(`- Total 12 Terobosan Agresif   : Rp ${aggressiveTotal.toLocaleString('id-ID')} (Target: Rp 29.500.000.000)`);
+console.log(`- TARGET KOMITMEN MINIMUM      : Rp 50.500.000.000`);
+console.log(`- TOTAL AGREGAT HORIZON 2030   : Rp ${grandTotal.toLocaleString('id-ID')} (Target: Rp 57.500.000.000)`);
 console.log(`------------------------------------------------------`);
 
-if (baselineTotal === 28000000000 && aggressiveTotal === 22500000000) {
-  console.log(`🎉 [AUDIT SUKSES] Seluruh angka presisi dan sesuai dokumen resmi BLUD STP!`);
+if (baselineTotal === 28000000000 && aggressiveTotal === 29500000000 && grandTotal === 57500000000) {
+  console.log(`🎉 [AUDIT SUKSES] Seluruh 20 inisiatif presisi dan sesuai dokumen resmi BLUD STP!`);
 } else {
   console.log(`⚠️ [PERHATIAN] Terjadi selisih kalkulasi terhadap pagu acuan resmi.`);
 }

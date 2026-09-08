@@ -21,8 +21,9 @@ Platform ini dibangun khusus sebagai instrumen pengambil keputusan (*executive b
    - Menutup celah fiskal akibat berakhirnya program kemitraan migas Pertamina melalui aktivasi aset tidur (*idle assets*) dan monetisasi model bisnis baru.
 3. **Target Agregat Finansial 2030 (Skala Penuh)**:
    - **Baseline Rutin (8 Inisiatif)**: Rp 28.000.000.000 / tahun.
-   - **Terobosan Agresif Baru (10 Inisiatif)**: Rp 22.500.000.000 / tahun.
-   - **Total Target Maksimal**: **Rp 50.500.000.000 / tahun**.
+   - **Terobosan Agresif Baru (12 Inisiatif)**: Rp 29.500.000.000 / tahun (termasuk Solo GovTech Hub & Solo AI Exchange).
+   - **Target Komitmen Minimum**: **Rp 50.500.000.000 / tahun**.
+   - **Total Target Horizon Skala Penuh**: **Rp 57.500.000.000 / tahun**.
 
 ---
 
@@ -38,15 +39,15 @@ Model bisnis yang dipaparkan dalam roadmap ini dirancang secara *audit-proof* (a
 
 ---
 
-## 🎯 5 Kluster Strategis & 18 Inisiatif Roadmap
+## 🎯 5 Kluster Strategis & 20 Inisiatif Roadmap
 
 | Kluster | Deskripsi | Jumlah Inisiatif |
 | :--- | :--- | :---: |
-| **🏢 Aset & Properti** | Komersialisasi ruang strategis (Gedung Sembrani, Eks AK-Tekstil, Rooftop Solar, dsb.) | 4 |
-| **🎓 Diklat & Sertifikasi** | Pendirian TUK LSP berlisensi BNSP, Welder Underground, Simulator Crane, Alat Berat | 4 |
-| **🤖 AI & Green Tech** | Pusat Riset AI & GPU Computing, Eduwisata Hijau, EV Center, Waste-to-Energy | 3 |
-| **🎭 MICE & Komersial** | Convention Hall, Food Park UMKM, Sports Center, Co-working Space | 4 |
-| **🌐 Kemitraan Global** | Kemitraan industri multinasional, inkubasi startup modal ventura, Naming Rights | 3 |
+| **🏢 Aset & Properti** | Komersialisasi ruang strategis (Gedung Sembrani, Eks AK-Tekstil, RS Kardiologi, PLUT) | 4 |
+| **🎓 Diklat & Sertifikasi** | Pendirian TUK LSP berlisensi BNSP, Welder Underground, Simulator Crane, Mandatori OPD | 4 |
+| **🤖 AI & Green Tech** | Solo GovTech Hub, Solo AI Exchange, Sentra AI GPU, SPKLU & PLTS Atap | 5 |
+| **🎭 MICE & Komersial** | Naming Rights Kawasan, Bundling MICE, Videotron OOH, Co-working Space | 4 |
+| **🌐 Kemitraan Global** | Kemitraan industri multinasional, SMK Go Global BP3MI, Marketing Agency Agregator | 3 |
 
 ---
 

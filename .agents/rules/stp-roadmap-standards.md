@@ -23,7 +23,7 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
 ---
 
 1. **Mandat Walikota & Kemandirian Fiskal**:
-   - STP ditargetkan mandiri 100% tanpa APBD, mencapai target Rp 50,5 Miliar pada 2030 (Rp 28M Baseline + Rp 22,5M Terobosan Agresif).
+   - STP ditargetkan mandiri 100% tanpa APBD, mencapai target baseline minimum Rp 50,5 Miliar hingga skala penuh Rp 57,5 Miliar pada 2030 (Rp 28M Baseline 8 Inisiatif + Rp 29,5M Terobosan Agresif 12 Inisiatif).
    - Menghilangkan potensi defisit operasional Rp 2,4 Miliar melalui penataan model bisnis dan regulasi.
 
 2. **Advokasi Regulasi (3-Pillar Regulatory Justification)**:
@@ -40,4 +40,9 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
    - **Desktop Fullscreen Fluid**: Menggunakan utility `.app-container` (fluid edge-to-edge dengan responsive dynamic padding `px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24`, tidak terkurung oleh batas statis kaku).
    - **Mobile Borderless**: Pada layar smartphone (`< 640px`), card inisiatif, tabel matriks komparasi, dan banner wajib borderless / flush ke tepi (`-mx-4 rounded-none border-x-0`) sehingga memanjakan mata pembaca tanpa margin samping yang menjepit konten.
    - **Tipografi & Readability Eksekutif**: Menggunakan Inter Variable font, display heading tegas (`text-white font-black tracking-tight`), serta body text berkontras tinggi (`text-slate-200` s/d `text-slate-300`) dengan line-height lega agar nyaman dibaca oleh Walikota dan pejabat eksekutif baik di layar proyektor rapat maupun smartphone.
-   - **Micro-Animations & Luminous Glow**: Hover glow beam, smooth card elevation (`translate-y`), pulse glow pada metrik utama, dan animasi selebrasi capaian target Rp 50,5 Miliar.
+   - **Micro-Animations & Luminous Glow**: Hover glow beam, smooth card elevation (`translate-y`), pulse glow pada metrik utama, dan animasi selebrasi capaian target finansial.
+
+5. **Pilar Portofolio Digital & Skalabilitas Berbasis Perangkat Lunak (Software & AI Scale)**:
+   - Selain optimalisasi aset fisik (ruang, gedung, lab, dan venue), roadmap mencakup inisiatif berskala eksponensial (*zero marginal cost of reproduction*):
+     - **GovTech Civic SaaS (Inisiatif #19)**: Penugasan STP sebagai pengembang & operator platform SaaS layanan warga terpadu (Solo Civic OS) untuk efisiensi belanja modal IT APBD dan monetisasi API gateway B2B/B2G lintas daerah Solo Raya.
+     - **Enterprise AI Agent Exchange (Inisiatif #20)**: Pemanfaatan infrastruktur Sentra AI & Micro Data Center STP sebagai marketplace dan runtime execution environment agen AI industri korporasi regional Solo Raya dengan jaminan kedaulatan data lokal (*local data sovereignty*).

@@ -29,8 +29,8 @@ Platform ini tidak hanya memaparkan ide komersialisasi, melainkan berfungsi seba
 - **Integritas Berkas**: Dilengkapi `.gitignore` standar Next.js sehingga aman dari file cache/sampah (`node_modules`, `.next`).
 - **Dokumentasi**: [README.md](file:///d:/Project/Roadmap%20STP/README.md) resmi telah memuat latar belakang, mandat, dasar hukum, tabel kluster inisiatif, dan panduan teknis.
 
-### B. Arsitektur Konten & 18 Inisiatif Roadmap
-Seluruh 18 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps/` dengan standar 6 bab wajib:
+### B. Arsitektur Konten & 20 Inisiatif Roadmap
+Seluruh 20 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps/` dengan standar 6 bab wajib:
 1. Perubahan Model Bisnis & Tata Kelola
 2. Subject Matter Expert (SME) Retainer
 3. Pusat Uji Kompetensi (TUK) & LSP Mandiri
@@ -49,6 +49,8 @@ Seluruh 18 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps
 16. Sertifikasi Mandatori LSP untuk OPD Pemkot Surakarta
 17. STP Industrial Innovation & R&D Retainer
 18. Jaringan Media Periklanan Digital (Videotron & Signage)
+19. Solo GovTech Hub: SaaS Layanan Warga Terpadu Solo Raya (Rp 3,0 M/thn)
+20. Solo AI Exchange: Marketplace Agen AI & Otomasi Korporasi (Rp 4,0 M/thn)
 
 ### C. Refaktor UI/UX (Dark Futuristic Civic Innovation)
 - **Estetika Elegan**: Mengadopsi palet Obsidian Navy (`#030712`, `#0a1128`) dengan aksen Electric Blue, Neon Cyan, dan Luminous Emerald.

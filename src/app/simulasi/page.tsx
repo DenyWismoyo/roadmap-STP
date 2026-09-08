@@ -76,7 +76,7 @@ export default function FinancialSimulationPage() {
               {/* Row 2: Breakthrough Injections */}
               <tr className="hover:bg-slate-800/40 bg-amber-950/20">
                 <td className="py-3 px-4 font-sans font-semibold text-amber-300">
-                  2. Tambahan 10 Terobosan Agresif
+                  2. Tambahan 12 Terobosan Agresif
                 </td>
                 {SCENARIO_DATA.map((d) => (
                   <td key={d.year} className="py-3 px-4 font-bold text-amber-400">

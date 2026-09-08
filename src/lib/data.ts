@@ -98,7 +98,7 @@ export const CLUSTERS = [
     id: "AI & Green Tech",
     name: "AI & Green Tech",
     color: "from-cyan-500 to-blue-500",
-    desc: "GPU Cloud AI, Edge Micro-Data Center, SPKLU EV Charging, dan PLTS Atap Mandiri",
+    desc: "Solo GovTech Civic SaaS, AI Agent Marketplace, GPU Cloud, Micro-Data Center, dan Energi Hijau",
   },
   {
     id: "MICE & Komersial",
@@ -160,7 +160,7 @@ export const REGULATORY_WAVES: RegulatoryWave[] = [
     color: "from-blue-500 to-cyan-600",
     badgeBg: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30",
     title: "Perluasan Model Bisnis Baru & Fleksibilitas Tarif Komersial",
-    description: "Penerbitan 3 Peraturan Walikota (Perwali) strategis untuk membuka lini bisnis berdaya ungkit tinggi: Retribusi Kawasan RS, Naming Rights, dan Retainer Industri.",
+    description: "Penerbitan Peraturan Walikota (Perwali) strategis untuk membuka lini bisnis berdaya ungkit tinggi: Retribusi Kawasan RS, Naming Rights, Retainer Industri, dan Solo GovTech SaaS.",
     instruments: [
       {
         title: "Perwali Penataan & Pengelolaan Kawasan Penunjang Terpadu RS Kardiologi",
@@ -179,6 +179,15 @@ export const REGULATORY_WAVES: RegulatoryWave[] = [
         urgency: "Sangat Mendesak",
         hurdle: "Belum ada nomenklatur peraturan daerah di Solo Raya untuk mengomersialkan nama gedung publik kepada sponsor BUMN/korporat.",
         legalShield: "Adopsi preseden regulasi Pergub DKI Jakarta (MRT & GBK) & Pasal 39 Permendagri 79/2018 (Pendapatan lain-lain yang sah).",
+      },
+      {
+        title: "Perwali Penugasan STP sebagai Operator GovTech SaaS & Interoperabilitas Layanan Publik",
+        type: "Perwali",
+        targetInitiative: "Solo GovTech Hub: SaaS Layanan Warga",
+        targetRevenue: 3000000000,
+        urgency: "Sangat Mendesak",
+        hurdle: "Belanja IT puluhan OPD terfragmentasi ke vendor pihak ketiga; belum ada mandat hukum tunggal bagi STP mengoperasikan Civic SaaS terpadu.",
+        legalShield: "Permendagri 79/2018 Pasal 34 (Pola Tarif Layanan Jasa Sistem Informasi) & UU 23/2014 tentang Kerja Sama Antar-Daerah.",
       },
       {
         title: "Perwali Tarif Fleksibel Layanan Riset Industri Presisi & Corporate Academy BLUD STP",
@@ -206,9 +215,18 @@ export const REGULATORY_WAVES: RegulatoryWave[] = [
     status: "Konsolidasi (2028)",
     color: "from-emerald-500 to-teal-600",
     badgeBg: "bg-emerald-500/20 text-emerald-300 border-emerald-500/30",
-    title: "Sentra Energi Hijau, Micro-Data Center AI & Reklame Digital",
+    title: "Sentra Energi Hijau, Micro-Data Center, AI Marketplace & Reklame Digital",
     description: "Instruksi Walikota untuk memposisikan Solo Technopark sebagai ikon Net-Zero Emission dan Pusat Kedaulatan Data AI Terapan Jawa Tengah.",
     instruments: [
+      {
+        title: "Perwali Solo AI Agent Exchange & Regulatory Sandbox Otomasi Industri 4.0",
+        type: "Perwali",
+        targetInitiative: "Solo AI Exchange: Marketplace Otomasi Korporasi",
+        targetRevenue: 4000000000,
+        urgency: "Sangat Mendesak",
+        hurdle: "Ketiadaan payung hukum tingkat kota untuk menyelenggarakan marketplace digital agen AI terapan dan penyewaan komputasi GPU berlisensi BLUD.",
+        legalShield: "Permendagri 79/2018 Pasal 34 & 39 (Kerja sama inovasi teknologi & bagi hasil lisensi) serta Perpres 106/2017 tentang KST.",
+      },
       {
         title: "Instruksi Walikota Kawasan Mandiri Energi Bersih & Sentra Ekosistem EV Solo Technopark",
         type: "Instruksi Walikota",

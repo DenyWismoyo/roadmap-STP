@@ -135,7 +135,7 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Semua (18)
+              Semua ({initialRoadmaps.length})
             </button>
             <button
               onClick={() => setSelectedCategory("aggressive")}
@@ -145,7 +145,7 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Terobosan (10)
+              Terobosan ({initialRoadmaps.filter((r) => r.category.toLowerCase().includes("aggressive")).length})
             </button>
             <button
               onClick={() => setSelectedCategory("baseline")}
@@ -155,7 +155,7 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
                   : "text-slate-400 hover:text-white"
               }`}
             >
-              Baseline (8)
+              Baseline ({initialRoadmaps.filter((r) => r.category.toLowerCase().includes("baseline")).length})
             </button>
           </div>
 
@@ -167,7 +167,7 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
               onChange={(e: any) => setSortBy(e.target.value)}
               className="bg-transparent text-xs font-bold text-slate-300 focus:outline-none cursor-pointer"
             >
-              <option value="number" className="bg-slate-900 text-white">Urutan Nomor (#1 s/d #18)</option>
+              <option value="number" className="bg-slate-900 text-white">Urutan Nomor (#1 s/d #{initialRoadmaps.length})</option>
               <option value="revenue_desc" className="bg-slate-900 text-white">Potensi Tertinggi</option>
               <option value="revenue_asc" className="bg-slate-900 text-white">Potensi Terendah</option>
             </select>
@@ -201,7 +201,7 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
       {/* Results Status Bar */}
       <div className="flex flex-wrap items-center justify-between gap-4 px-2">
         <div className="text-sm text-slate-300">
-          Menampilkan <span className="font-bold text-white">{filteredRoadmaps.length}</span> dari 18 inisiatif roadmap
+          Menampilkan <span className="font-bold text-white">{filteredRoadmaps.length}</span> dari {initialRoadmaps.length} inisiatif roadmap
           {hasActiveFilters && (
             <button
               onClick={resetFilters}
