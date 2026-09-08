@@ -31,10 +31,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`dark ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#030712] text-slate-100 bg-civic-dark-grid relative selection:bg-cyan-500 selection:text-slate-950 antialiased">
-        {/* Subtle Ambient Aurora Light Overlay */}
-        <div className="fixed inset-0 bg-radial-glow pointer-events-none z-0 opacity-80" />
+    <html lang="id" className={inter.variable}>
+      <body className="min-h-screen flex flex-col bg-white text-slate-800 bg-civic-grid relative selection:bg-blue-100 selection:text-blue-900 antialiased">
+        {/* Subtle Ambient Soft Light Overlay */}
+        <div className="fixed inset-0 bg-radial-glow pointer-events-none z-0 opacity-60" />
         
         {/* Content Layer */}
         <div className="relative z-10 flex flex-col min-h-screen">

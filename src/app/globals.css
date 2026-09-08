@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --bg-base: #f8fafc;
+    --bg-base: #ffffff;
     --bg-elevated: #ffffff;
     --bg-surface: #ffffff;
-    --bg-muted: #f1f5f9;
+    --bg-muted: #f8fafc;
     --border-subtle: #e2e8f0;
     --border-glow: rgba(37, 99, 235, 0.2);
     
@@ -21,17 +21,18 @@
   html {
     color-scheme: light;
     scroll-behavior: smooth;
+    background-color: #ffffff;
   }
 
   body {
-    background-color: #f8fafc;
-    color: #1e293b;
+    background-color: #ffffff;
+    color: #0f172a;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    selection-background-color: #93c5fd;
-    selection-color: #0f172a;
+    selection-background-color: #bfdbfe;
+    selection-color: #1e3a8a;
   }
 }
 
@@ -150,18 +151,19 @@
 }
 
 /* Ambient Background Grid & Subtle Radial Lights */
+.bg-civic-grid,
 .bg-civic-dark-grid {
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.025) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
 .bg-radial-glow {
   background: 
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.08), transparent 70%),
-    radial-gradient(circle at 85% 15%, rgba(2, 132, 199, 0.05), transparent 50%),
-    radial-gradient(circle at 15% 35%, rgba(5, 150, 105, 0.04), transparent 50%);
+    radial-gradient(ellipse 80% 40% at 50% -10%, rgba(37, 99, 235, 0.04), transparent 70%),
+    radial-gradient(circle at 85% 15%, rgba(2, 132, 199, 0.03), transparent 50%),
+    radial-gradient(circle at 15% 35%, rgba(5, 150, 105, 0.02), transparent 50%);
 }
 
 /* Animated Shimmer Line */
