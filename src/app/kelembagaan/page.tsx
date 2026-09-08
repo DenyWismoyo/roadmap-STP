@@ -107,13 +107,11 @@ export default function InstitutionalPage() {
         </div>
       </div>
 
-      {/* MARKDOWN OVERVIEW ARTICLE */}
+      {/* MARKDOWN OVERVIEW ARTICLE (EXECUTIVE WHITE PAPER) */}
       {overviewDoc && (
-        <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-5 sm:p-10 bg-slate-900/80 backdrop-blur-2xl border-y sm:border-x border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.6)]">
-          <div className="prose prose-invert max-w-none">
-            <MarkdownViewer content={overviewDoc.content} />
-          </div>
-        </div>
+        <section aria-label="Naskah Transformasi Kelembagaan">
+          <MarkdownViewer content={overviewDoc.content} showDocumentHeader={true} />
+        </section>
       )}
     </div>
   );

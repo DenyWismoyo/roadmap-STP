@@ -1,268 +1,356 @@
 "use client";
 
-import React from "react";
-import { Info, AlertTriangle, CheckCircle, Flame, ShieldAlert } from "lucide-react";
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
+import rehypeRaw from "rehype-raw";
+import {
+  Info,
+  AlertTriangle,
+  CheckCircle2,
+  Flame,
+  ShieldAlert,
+  FileText,
+  Copy,
+  Check,
+  Printer,
+  BookOpen,
+} from "lucide-react";
 
 interface Props {
   content: string;
+  showDocumentHeader?: boolean;
 }
 
-export default function MarkdownViewer({ content }: Props) {
-  // Parse content into structured blocks
-  const renderFormattedContent = () => {
-    const lines = content.split("\n");
-    const elements: React.ReactNode[] = [];
-    let inTable = false;
-    let tableRows: string[][] = [];
+// Helper to extract plain text from React nodes
+function extractText(node: React.ReactNode): string {
+  if (typeof node === "string") return node;
+  if (typeof node === "number") return String(node);
+  if (!node) return "";
+  if (Array.isArray(node)) return node.map(extractText).join("");
+  if (React.isValidElement(node)) {
+    const props = node.props as { children?: React.ReactNode };
+    return extractText(props?.children);
+  }
+  return "";
+}
 
-    const flushTable = (key: number) => {
-      if (tableRows.length === 0) return;
-      elements.push(
-        <div key={`table-${key}`} className="my-6 overflow-x-auto -mx-4 sm:mx-0 rounded-none sm:rounded-2xl border-y sm:border-x border-white/10 bg-slate-950/60 shadow-lg">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm">
-            <thead>
-              <tr className="border-b border-white/10 bg-slate-900/90">
-                {tableRows[0]?.map((th, i) => (
-                  <th key={i} className="py-3.5 px-4 font-bold text-slate-200 uppercase tracking-wider text-[11px]">
-                    {th.trim()}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-white/5">
-              {tableRows.slice(1).map((row, rIdx) => (
-                <tr key={rIdx} className="hover:bg-slate-800/40 transition-colors">
-                  {row.map((td, cIdx) => {
-                    const text = td.trim();
-                    const isBold = text.startsWith("**") && text.endsWith("**");
-                    const cleaned = text.replace(/\*\*/g, "");
-                    return (
-                      <td
-                        key={cIdx}
-                        className={`py-3 px-4 text-slate-300 ${isBold ? "font-bold text-cyan-300" : ""}`}
-                      >
-                        {cleaned}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      );
-      tableRows = [];
-      inTable = false;
-    };
+// Helper to strip the [!ALERT] header from children
+function stripAlertHeader(children: React.ReactNode): React.ReactNode {
+  if (typeof children === "string") {
+    return children.replace(/^\s*\[!(NOTE|IMPORTANT|WARNING|TIP|CAUTION)\]\s*/i, "");
+  }
+  if (Array.isArray(children)) {
+    return children.map((child, idx) => {
+      if (idx === 0) return stripAlertHeader(child);
+      return child;
+    });
+  }
+  if (React.isValidElement(children)) {
+    const props = children.props as { children?: React.ReactNode };
+    if (props && props.children) {
+      return React.cloneElement(children, {
+        ...props,
+        children: stripAlertHeader(props.children),
+      } as any);
+    }
+  }
+  return children;
+}
 
-    let i = 0;
-    while (i < lines.length) {
-      const line = lines[i];
+export default function MarkdownViewer({ content, showDocumentHeader = true }: Props) {
+  const [copied, setCopied] = useState(false);
 
-      // Table line
-      if (line.trim().startsWith("|") && line.trim().endsWith("|")) {
-        inTable = true;
-        // Check if it's separator line |:---|:---|
-        if (!line.includes("---")) {
-          const cells = line
-            .split("|")
-            .slice(1, -1)
-            .map((c) => c.trim());
-          tableRows.push(cells);
-        }
-        i++;
-        continue;
-      } else if (inTable) {
-        flushTable(i);
-      }
+  const handleCopyText = () => {
+    navigator.clipboard.writeText(content);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-      // GitHub Alert Quotes (> [!NOTE], > [!IMPORTANT], > [!WARNING])
-      if (line.startsWith("> [!")) {
-        const typeMatch = line.match(/> \[!(NOTE|IMPORTANT|WARNING|TIP|CAUTION)\]/);
-        const type = typeMatch ? typeMatch[1] : "NOTE";
-        const alertLines: string[] = [];
-        i++;
-        while (i < lines.length && lines[i].startsWith(">")) {
-          alertLines.push(lines[i].replace(/^>\s?/, ""));
-          i++;
-        }
+  const handlePrint = () => {
+    window.print();
+  };
 
-        const alertStyles = {
-          NOTE: {
-            border: "border-sky-500/40",
-            bg: "bg-sky-950/40 text-sky-200 shadow-[0_0_15px_rgba(14,165,233,0.12)]",
-            icon: Info,
-            title: "Catatan Strategis",
-            titleColor: "text-sky-300",
-          },
-          IMPORTANT: {
-            border: "border-blue-500/40",
-            bg: "bg-blue-950/40 text-blue-200 shadow-[0_0_15px_rgba(59,130,246,0.12)]",
-            icon: CheckCircle,
-            title: "Poin Krusial",
-            titleColor: "text-blue-300",
-          },
-          WARNING: {
-            border: "border-amber-500/40",
-            bg: "bg-amber-950/40 text-amber-200 shadow-[0_0_15px_rgba(245,158,11,0.12)]",
-            icon: AlertTriangle,
-            title: "Perhatian / Hambatan Regulasi",
-            titleColor: "text-amber-300",
-          },
-          TIP: {
-            border: "border-emerald-500/40",
-            bg: "bg-emerald-950/40 text-emerald-200 shadow-[0_0_15px_rgba(16,185,129,0.12)]",
-            icon: Flame,
-            title: "Peluang Quick Win",
-            titleColor: "text-emerald-300",
-          },
-          CAUTION: {
-            border: "border-rose-500/40",
-            bg: "bg-rose-950/40 text-rose-200 shadow-[0_0_15px_rgba(244,63,94,0.12)]",
-            icon: ShieldAlert,
-            title: "Mitigasi Risiko",
-            titleColor: "text-rose-300",
-          },
-        }[type] || {
-          border: "border-slate-700",
-          bg: "bg-slate-900/60 text-slate-300",
-          icon: Info,
-          title: "Informasi",
-          titleColor: "text-slate-300",
-        };
+  // Estimate reading time
+  const wordCount = content.split(/\s+/).filter(Boolean).length;
+  const readingTimeMinutes = Math.max(1, Math.ceil(wordCount / 200));
 
-        const Icon = alertStyles.icon;
-
-        elements.push(
-          <div
-            key={`alert-${i}`}
-            className={`my-5 p-4 sm:p-5 rounded-xl sm:rounded-2xl border ${alertStyles.border} ${alertStyles.bg} backdrop-blur-md`}
-          >
-            <div className={`flex items-center gap-2 font-bold text-xs sm:text-sm uppercase tracking-wider mb-1.5 ${alertStyles.titleColor}`}>
-              <Icon className="w-4 h-4" />
-              {alertStyles.title}
+  return (
+    <article className="w-full bg-white text-slate-900 -mx-4 sm:mx-0 rounded-none sm:rounded-3xl border-y sm:border-x border-slate-200/90 shadow-[0_20px_50px_rgba(0,0,0,0.12)] relative overflow-hidden transition-all">
+      {/* EXECUTIVE WHITE PAPER TOP HEADER */}
+      {showDocumentHeader && (
+        <header className="px-6 sm:px-10 py-5 bg-gradient-to-r from-slate-50 via-blue-50/40 to-slate-50 border-b border-slate-200/90 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-500/20">
+              <FileText className="w-4 h-4" />
             </div>
-            <div className="text-xs sm:text-sm leading-relaxed text-slate-200">
-              {alertLines.join(" ")}
+            <div>
+              <div className="text-[10px] sm:text-[11px] font-mono font-bold tracking-widest uppercase text-blue-700">
+                UPTD KST SOLO TECHNOPARK • DOKUMEN RESMI
+              </div>
+              <div className="text-xs font-semibold text-slate-600 flex items-center gap-2">
+                <span>Naskah Kebijakan Eksekutif</span>
+                <span className="text-slate-300">•</span>
+                <span className="flex items-center gap-1 text-slate-500">
+                  <BookOpen className="w-3 h-3 text-slate-400" />
+                  ~{readingTimeMinutes} mnt baca ({wordCount} kata)
+                </span>
+              </div>
             </div>
           </div>
-        );
-        continue;
-      }
 
-      // Headings
-      if (line.startsWith("# ")) {
-        elements.push(
-          <h1 key={`h1-${i}`} className="text-2xl sm:text-3xl font-black text-white mt-8 mb-4 tracking-tight">
-            {line.replace(/^# /, "")}
-          </h1>
-        );
-        i++;
-        continue;
-      }
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleCopyText}
+              type="button"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-sm transition-colors"
+              title="Salin isi dokumen"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  <span className="text-emerald-700 font-bold">Tersalin!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5 text-slate-500" />
+                  <span>Salin Naskah</span>
+                </>
+              )}
+            </button>
 
-      if (line.startsWith("## ")) {
-        elements.push(
-          <h2 key={`h2-${i}`} className="text-xl sm:text-2xl font-bold text-white mt-8 mb-3 tracking-tight border-b border-white/10 pb-2 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
-            {line.replace(/^## /, "")}
-          </h2>
-        );
-        i++;
-        continue;
-      }
+            <button
+              onClick={handlePrint}
+              type="button"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:text-blue-700 bg-white hover:bg-slate-50 border border-slate-200 rounded-lg shadow-sm transition-colors"
+              title="Cetak dokumen"
+            >
+              <Printer className="w-3.5 h-3.5 text-slate-500" />
+              <span>Cetak / PDF</span>
+            </button>
+          </div>
+        </header>
+      )}
 
-      if (line.startsWith("### ")) {
-        elements.push(
-          <h3 key={`h3-${i}`} className="text-base sm:text-lg font-bold text-cyan-300 mt-5 mb-2">
-            {line.replace(/^### /, "")}
-          </h3>
-        );
-        i++;
-        continue;
-      }
+      {/* DOCUMENT READING CANVAS IN ULTRA-CRISP WHITE PALETTE */}
+      <div className="p-6 sm:p-10 lg:p-14 text-slate-800">
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm, remarkBreaks]}
+          rehypePlugins={[rehypeRaw]}
+          components={{
+            // HEADINGS
+            h1: ({ children }) => (
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 mt-10 mb-5 tracking-tight border-b-2 border-slate-200 pb-3 leading-snug">
+                {children}
+              </h1>
+            ),
+            h2: ({ children }) => (
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-950 mt-10 mb-4 tracking-tight border-b border-slate-200 pb-2.5 flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-600 shrink-0"></span>
+                <span className="leading-snug">{children}</span>
+              </h2>
+            ),
+            h3: ({ children }) => (
+              <h3 className="text-base sm:text-lg font-bold text-blue-950 mt-7 mb-3 tracking-tight flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>
+                <span>{children}</span>
+              </h3>
+            ),
+            h4: ({ children }) => (
+              <h4 className="text-sm sm:text-base font-bold text-slate-900 mt-5 mb-2">
+                {children}
+              </h4>
+            ),
 
-      // Horizontal rules
-      if (line.trim() === "---") {
-        elements.push(<hr key={`hr-${i}`} className="my-6 border-white/10" />);
-        i++;
-        continue;
-      }
+            // PARAGRAPHS & EMPHASIS
+            p: ({ children }) => (
+              <p className="my-3.5 text-[15px] sm:text-base leading-relaxed text-slate-700 font-normal">
+                {children}
+              </p>
+            ),
+            strong: ({ children }) => (
+              <strong className="font-bold text-slate-950">{children}</strong>
+            ),
+            em: ({ children }) => (
+              <em className="italic text-slate-700">{children}</em>
+            ),
 
-      // Unordered lists
-      if (line.trim().startsWith("- ") || line.trim().startsWith("* ")) {
-        const text = line.replace(/^[\s]*[-*]\s/, "");
-        elements.push(
-          <li key={`li-${i}`} className="ml-5 list-disc text-sm text-slate-200 my-1.5 leading-relaxed">
-            {formatInlineText(text)}
-          </li>
-        );
-        i++;
-        continue;
-      }
+            // LISTS
+            ul: ({ children }) => (
+              <ul className="my-4 space-y-2 list-disc list-outside ml-6 text-slate-700 text-[15px] sm:text-base leading-relaxed">
+                {children}
+              </ul>
+            ),
+            ol: ({ children }) => (
+              <ol className="my-4 space-y-2 list-decimal list-outside ml-6 text-slate-700 text-[15px] sm:text-base leading-relaxed">
+                {children}
+              </ol>
+            ),
+            li: ({ children }) => (
+              <li className="leading-relaxed pl-1">{children}</li>
+            ),
 
-      // Ordered lists
-      if (/^\d+\.\s/.test(line.trim())) {
-        const text = line.replace(/^[\s]*\d+\.\s/, "");
-        elements.push(
-          <li key={`oli-${i}`} className="ml-5 list-decimal text-sm text-slate-200 my-1.5 leading-relaxed">
-            {formatInlineText(text)}
-          </li>
-        );
-        i++;
-        continue;
-      }
+            // TABLES
+            table: ({ children }) => (
+              <div className="my-6 overflow-x-auto -mx-4 sm:mx-0 rounded-2xl border border-slate-200 shadow-sm bg-white">
+                <table className="w-full text-left border-collapse text-xs sm:text-sm">
+                  {children}
+                </table>
+              </div>
+            ),
+            thead: ({ children }) => (
+              <thead className="bg-slate-100/90 border-b border-slate-200">
+                {children}
+              </thead>
+            ),
+            th: ({ children }) => (
+              <th className="py-3.5 px-4 font-bold text-slate-900 uppercase tracking-wider text-[11px] font-mono">
+                {children}
+              </th>
+            ),
+            tbody: ({ children }) => (
+              <tbody className="divide-y divide-slate-100 bg-white">
+                {children}
+              </tbody>
+            ),
+            tr: ({ children }) => (
+              <tr className="hover:bg-blue-50/40 transition-colors">
+                {children}
+              </tr>
+            ),
+            td: ({ children }) => (
+              <td className="py-3.5 px-4 text-slate-700 leading-normal border-slate-100">
+                {children}
+              </td>
+            ),
 
-      // Empty lines
-      if (!line.trim()) {
-        i++;
-        continue;
-      }
+            // BLOCKQUOTES & GITHUB ALERTS (> [!NOTE], > [!IMPORTANT], > [!WARNING])
+            blockquote: ({ children }) => {
+              const text = extractText(children);
+              const match = text.match(/^\s*\[!(NOTE|IMPORTANT|WARNING|TIP|CAUTION)\]/i);
 
-      // Paragraphs
-      elements.push(
-        <p key={`p-${i}`} className="my-3 text-sm sm:text-base text-slate-200 leading-relaxed">
-          {formatInlineText(line)}
-        </p>
-      );
-      i++;
-    }
+              if (match) {
+                const alertType = match[1].toUpperCase() as
+                  | "NOTE"
+                  | "IMPORTANT"
+                  | "WARNING"
+                  | "TIP"
+                  | "CAUTION";
 
-    if (inTable) {
-      flushTable(lines.length);
-    }
+                const config = {
+                  NOTE: {
+                    border: "border-sky-300 bg-sky-50/90 text-sky-950",
+                    badge: "bg-sky-200/80 text-sky-900",
+                    icon: Info,
+                    title: "Catatan Strategis",
+                  },
+                  IMPORTANT: {
+                    border: "border-blue-300 bg-blue-50/90 text-blue-950",
+                    badge: "bg-blue-200/80 text-blue-900",
+                    icon: CheckCircle2,
+                    title: "Poin Krusial Kebijakan",
+                  },
+                  WARNING: {
+                    border: "border-amber-300 bg-amber-50/90 text-amber-950",
+                    badge: "bg-amber-200/80 text-amber-900",
+                    icon: AlertTriangle,
+                    title: "Perhatian / Hambatan Regulasi",
+                  },
+                  TIP: {
+                    border: "border-emerald-300 bg-emerald-50/90 text-emerald-950",
+                    badge: "bg-emerald-200/80 text-emerald-900",
+                    icon: Flame,
+                    title: "Peluang Quick Win",
+                  },
+                  CAUTION: {
+                    border: "border-rose-300 bg-rose-50/90 text-rose-950",
+                    badge: "bg-rose-200/80 text-rose-900",
+                    icon: ShieldAlert,
+                    title: "Mitigasi Risiko Tinggi",
+                  },
+                }[alertType];
 
-    return elements;
-  };
+                const Icon = config.icon;
+                const cleanedChildren = stripAlertHeader(children);
 
-  // Helper for inline bold, italic, code formatting
-  const formatInlineText = (text: string): React.ReactNode => {
-    const parts = text.split(/(\*\*.*?\*\*|\*.*?\*|`.*?`)/g);
-    return parts.map((part, index) => {
-      if (part.startsWith("**") && part.endsWith("**")) {
-        return (
-          <strong key={index} className="text-white font-bold">
-            {part.slice(2, -2)}
-          </strong>
-        );
-      }
-      if (part.startsWith("*") && part.endsWith("*")) {
-        return (
-          <em key={index} className="text-slate-300 italic">
-            {part.slice(1, -1)}
-          </em>
-        );
-      }
-      if (part.startsWith("`") && part.endsWith("`")) {
-        return (
-          <code key={index} className="px-1.5 py-0.5 rounded bg-slate-800 font-mono text-xs text-cyan-300 border border-white/10">
-            {part.slice(1, -1)}
-          </code>
-        );
-      }
-      return part;
-    });
-  };
+                return (
+                  <div
+                    className={`my-6 p-4 sm:p-5 rounded-2xl border ${config.border} shadow-sm space-y-2`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider ${config.badge}`}
+                      >
+                        <Icon className="w-3.5 h-3.5" />
+                        {config.title}
+                      </span>
+                    </div>
+                    <div className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+                      {cleanedChildren}
+                    </div>
+                  </div>
+                );
+              }
 
-  return <div className="space-y-1">{renderFormattedContent()}</div>;
+              return (
+                <blockquote className="my-5 border-l-4 border-blue-600 bg-slate-50/80 py-3.5 px-5 rounded-r-xl text-slate-700 italic text-[15px] sm:text-base leading-relaxed">
+                  {children}
+                </blockquote>
+              );
+            },
+
+            // CODE
+            code: ({ className, children, ...props }) => {
+              const isInline = !className;
+              if (isInline) {
+                return (
+                  <code
+                    className="px-1.5 py-0.5 rounded bg-slate-100 text-blue-700 font-mono text-xs font-bold border border-slate-200"
+                    {...props}
+                  >
+                    {children}
+                  </code>
+                );
+              }
+              return (
+                <pre className="my-4 p-4 rounded-xl bg-slate-900 text-emerald-400 font-mono text-xs overflow-x-auto border border-slate-800 shadow-inner">
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                </pre>
+              );
+            },
+
+            // HORIZONTAL RULE
+            hr: () => <hr className="my-8 border-slate-200" />,
+
+            // LINKS
+            a: ({ href, children }) => (
+              <a
+                href={href}
+                className="text-blue-600 hover:text-blue-800 underline font-semibold transition-colors"
+                target={href?.startsWith("http") ? "_blank" : undefined}
+                rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
+              >
+                {children}
+              </a>
+            ),
+          }}
+        >
+          {content}
+        </ReactMarkdown>
+      </div>
+
+      {/* EXECUTIVE WHITE PAPER BOTTOM FOOTER */}
+      <footer className="px-6 sm:px-10 py-4 bg-slate-50 border-t border-slate-200/90 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div>
+          UPTD Kawasan Sains dan Teknologi Solo Technopark • Pemerintah Kota Surakarta
+        </div>
+        <div className="font-semibold text-slate-600">
+          Paparan Roadmap Kemandirian BLUD 2026–2030
+        </div>
+      </footer>
+    </article>
+  );
 }

@@ -69,11 +69,11 @@ export default async function RoadmapDetailPage({ params }: Props) {
           className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-cyan-300 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          Kembali ke Direktori 18 Inisiatif
+          Kembali ke Direktori 20 Inisiatif
         </Link>
 
         <div className="flex items-center gap-2 text-xs text-slate-400">
-          <span>Inisiatif #{roadmap.number} dari 18</span>
+          <span>Inisiatif #{roadmap.number} dari 20</span>
         </div>
       </div>
 
@@ -202,12 +202,10 @@ export default async function RoadmapDetailPage({ params }: Props) {
         </p>
       </div>
 
-      {/* DETAILED MARKDOWN BODY CONTENT */}
-      <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-5 sm:p-10 bg-slate-900/75 backdrop-blur-2xl border-y sm:border-x border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.5)]">
-        <div className="prose prose-invert max-w-none">
-          <MarkdownViewer content={roadmap.content} />
-        </div>
-      </div>
+      {/* DETAILED MARKDOWN BODY CONTENT (EXECUTIVE WHITE PAPER) */}
+      <section aria-label="Naskah Kebijakan Roadmap">
+        <MarkdownViewer content={roadmap.content} showDocumentHeader={true} />
+      </section>
 
       {/* NEXT & PREVIOUS ROADMAP NAVIGATION */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-white/10">
