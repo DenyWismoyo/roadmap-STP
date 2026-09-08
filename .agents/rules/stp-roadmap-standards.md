@@ -35,12 +35,13 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
 3. **Metadata Frontmatter**:
    - Wajib menyertakan: `id`, `number`, `title`, `category`, `cluster`, `potential_annual_revenue`, `timeline_stage`, `risk_level`, `regulatory_instrument`, `regulatory_urgency`, `pic`, `target_market`, `kpi_target`, `icon`, `summary`.
 
-4. **Standar Desain UI/UX & Tampilan Visual (Futuristic Civic Intelligence)**:
-   - **Tema Warna**: Dark Slate / Deep Navy Base (`#030712`, `#0a1128`, `#0f172a`) dengan glassmorphism (`backdrop-filter: blur(16px–24px)`), aksen neon cyan (`#06b6d4`), blue (`#3b82f6`), emerald (`#10b981`), dan gold/amber (`#f59e0b`).
-   - **Desktop Fullscreen Fluid**: Menggunakan utility `.app-container` (fluid edge-to-edge dengan responsive dynamic padding `px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24`, tidak terkurung oleh batas statis kaku).
-   - **Mobile Borderless**: Pada layar smartphone (`< 640px`), card inisiatif, tabel matriks komparasi, dan banner wajib borderless / flush ke tepi (`-mx-4 rounded-none border-x-0`) sehingga memanjakan mata pembaca tanpa margin samping yang menjepit konten.
-   - **Tipografi & Readability Eksekutif**: Menggunakan Inter Variable font, display heading tegas (`text-white font-black tracking-tight`), serta body text berkontras tinggi (`text-slate-200` s/d `text-slate-300`) dengan line-height lega agar nyaman dibaca oleh Walikota dan pejabat eksekutif baik di layar proyektor rapat maupun smartphone.
-   - **Micro-Animations & Luminous Glow**: Hover glow beam, smooth card elevation (`translate-y`), pulse glow pada metrik utama, dan animasi selebrasi capaian target finansial.
+4. **Standar Desain UI/UX & Tampilan Visual (Executive Clean White Theme)**:
+   - **Tema Warna**: Clean Executive White Base (`#ffffff` & `#f8fafc`) dengan aksen Solo Technopark Royal Blue (`#1e40af`, `#2563eb`), Precision Sky (`#0284c7`), Fiscal Emerald (`#059669`, `#10b981`), Policy Amber (`#d97706`), dan Civic Rose (`#e11d48`).
+   - **Kartu & Kontainer**: Putih bersih (`bg-white`) dengan border halus (`border-slate-200/80`), bayangan lembut berlapis (`shadow-sm`, `shadow-md`, `hover:shadow-xl`), dan lencana pastel bertepi tegas (`border border-blue-200 bg-blue-50/80`).
+   - **Desktop Fullscreen Fluid**: Menggunakan utility `.app-container` (fluid edge-to-edge dengan responsive dynamic padding `px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-24`, proporsional untuk monitor rapat eksekutif).
+   - **Mobile Borderless**: Pada layar smartphone (`< 640px`), card inisiatif, tabel matriks komparasi, dan banner wajib borderless / flush ke tepi (`-mx-4 rounded-none border-x-0 border-y border-slate-200`) sehingga memanjakan mata pembaca tanpa margin samping yang menjepit konten.
+   - **Tablet Adaptif**: Grid 2 kolom seimbang dengan ruang sentuh yang lega (*ergonomic touch targets*).
+   - **Tipografi & Readability Eksekutif**: Menggunakan Inter Variable font, display heading tegas Slate-950 (`text-slate-950 font-black tracking-tight`), serta body text berkontras tinggi Slate-700/Slate-600 (`text-slate-700` dengan `leading-relaxed`) agar nyaman dibaca oleh Walikota dan jajaran pimpinan daerah.
 
 5. **Pilar Portofolio Digital & Skalabilitas Berbasis Perangkat Lunak (Software & AI Scale)**:
    - Selain optimalisasi aset fisik (ruang, gedung, lab, dan venue), roadmap mencakup inisiatif berskala eksponensial (*zero marginal cost of reproduction*):

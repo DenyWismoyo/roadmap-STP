@@ -59,14 +59,14 @@ export default function InstitutionalPage() {
     <div className="app-container py-12 space-y-10">
       {/* Header Banner */}
       <div className="space-y-3">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider shadow-[0_0_10px_rgba(6,182,212,0.2)]">
-          <Landmark className="w-3.5 h-3.5 text-cyan-400" />
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider shadow-sm">
+          <Landmark className="w-3.5 h-3.5 text-blue-600" />
           Sejarah & Tata Kelola Hukum
         </div>
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight">
           Dinamika Kelembagaan & Regulasi UPTD KST Solo Technopark
         </h1>
-        <p className="text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed">
+        <p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
           Evolusi dua dekade dari unit balai pelatihan teknis lokal hingga menjadi Kawasan Sains dan Teknologi (KST) BLUD mandiri di bawah koordinasi BRIDA Kota Surakarta.
         </p>
       </div>
@@ -77,11 +77,11 @@ export default function InstitutionalPage() {
       {/* LEGAL FOUNDATION GRID */}
       <div className="space-y-6">
         <div>
-          <div className="flex items-center gap-2 text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
             <Scale className="w-4 h-4" />
             Landasan Hukum Pelaksanaan
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-white">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
             8 Instrumen Hukum Pengoperasian BLUD STP
           </h2>
         </div>
@@ -90,15 +90,15 @@ export default function InstitutionalPage() {
           {LEGAL_BASIS.map((item, idx) => (
             <div
               key={idx}
-              className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-slate-900/75 backdrop-blur-xl border-y sm:border-x border-white/10 hover:border-cyan-500/40 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition-all flex flex-col justify-between space-y-3"
+              className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-white border-y sm:border-x border-slate-200/90 shadow-sm hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between space-y-3"
             >
               <div className="space-y-2">
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-800 text-cyan-300 border border-white/10">
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
                   Regulasi #{idx + 1}
                 </span>
-                <h4 className="text-sm font-bold text-white">{item.law}</h4>
-                <div className="text-xs font-semibold text-cyan-400">{item.subject}</div>
-                <p className="text-[11px] text-slate-300 leading-relaxed pt-1">
+                <h4 className="text-sm font-bold text-slate-950">{item.law}</h4>
+                <div className="text-xs font-semibold text-blue-600">{item.subject}</div>
+                <p className="text-[11px] text-slate-600 leading-relaxed pt-1">
                   {item.desc}
                 </p>
               </div>

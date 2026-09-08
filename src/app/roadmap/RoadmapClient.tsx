@@ -103,7 +103,7 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
   return (
     <div className="space-y-6">
       {/* Search & Main Filter Controls Bar */}
-      <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-5 sm:p-6 bg-slate-900/80 backdrop-blur-2xl border-y sm:border-x border-white/10 shadow-[0_10px_35px_rgba(0,0,0,0.5)] space-y-4">
+      <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-5 sm:p-6 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm space-y-4">
         <div className="flex flex-col md:flex-row gap-3">
           {/* Search Input */}
           <div className="relative flex-grow">
@@ -113,12 +113,12 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
               placeholder="Cari nama inisiatif, mitra, atau kata kunci..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-950/80 border border-white/10 rounded-2xl pl-11 pr-10 py-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-cyan-500 focus:bg-slate-950 transition-all shadow-inner"
+              className="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-11 pr-10 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:bg-white transition-all shadow-inner"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -126,13 +126,13 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
           </div>
 
           {/* Category Selector */}
-          <div className="flex items-center gap-1 bg-slate-950/80 p-1.5 rounded-2xl border border-white/10 shrink-0">
+          <div className="flex items-center gap-1 bg-slate-100 p-1.5 rounded-2xl border border-slate-200 shrink-0">
             <button
               onClick={() => setSelectedCategory("all")}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                 selectedCategory === "all"
-                  ? "bg-slate-800 text-white shadow-sm"
-                  : "text-slate-400 hover:text-white"
+                  ? "bg-white text-slate-900 shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Semua ({initialRoadmaps.length})
@@ -141,8 +141,8 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
               onClick={() => setSelectedCategory("aggressive")}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                 selectedCategory === "aggressive"
-                  ? "bg-amber-500 text-slate-950 font-black shadow-[0_0_12px_rgba(245,158,11,0.4)]"
-                  : "text-slate-400 hover:text-white"
+                  ? "bg-amber-500 text-white font-black shadow-sm"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Terobosan ({initialRoadmaps.filter((r) => r.category.toLowerCase().includes("aggressive")).length})
@@ -151,8 +151,8 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
               onClick={() => setSelectedCategory("baseline")}
               className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${
                 selectedCategory === "baseline"
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-[0_0_12px_rgba(6,182,212,0.4)]"
-                  : "text-slate-400 hover:text-white"
+                  ? "bg-blue-600 text-white shadow-sm font-bold"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Baseline ({initialRoadmaps.filter((r) => r.category.toLowerCase().includes("baseline")).length})
@@ -160,24 +160,24 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
           </div>
 
           {/* Sort Selector */}
-          <div className="flex items-center gap-2 bg-slate-950/80 px-3.5 py-2 rounded-2xl border border-white/10 shrink-0">
-            <ArrowUpDown className="w-4 h-4 text-slate-400" />
+          <div className="flex items-center gap-2 bg-slate-100 px-3.5 py-2 rounded-2xl border border-slate-200 shrink-0">
+            <ArrowUpDown className="w-4 h-4 text-slate-500" />
             <select
               value={sortBy}
               onChange={(e: any) => setSortBy(e.target.value)}
-              className="bg-transparent text-xs font-bold text-slate-300 focus:outline-none cursor-pointer"
+              className="bg-transparent text-xs font-bold text-slate-700 focus:outline-none cursor-pointer"
             >
-              <option value="number" className="bg-slate-900 text-white">Urutan Nomor (#1 s/d #{initialRoadmaps.length})</option>
-              <option value="revenue_desc" className="bg-slate-900 text-white">Potensi Tertinggi</option>
-              <option value="revenue_asc" className="bg-slate-900 text-white">Potensi Terendah</option>
+              <option value="number" className="bg-white text-slate-900">Urutan Nomor (#1 s/d #{initialRoadmaps.length})</option>
+              <option value="revenue_desc" className="bg-white text-slate-900">Potensi Tertinggi</option>
+              <option value="revenue_asc" className="bg-white text-slate-900">Potensi Terendah</option>
             </select>
           </div>
         </div>
 
         {/* Cluster Tabs */}
-        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-white/10">
-          <span className="text-xs font-bold text-slate-400 mr-1 flex items-center gap-1">
-            <Filter className="w-3.5 h-3.5 text-cyan-400" /> Kluster:
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100">
+          <span className="text-xs font-bold text-slate-500 mr-1 flex items-center gap-1">
+            <Filter className="w-3.5 h-3.5 text-blue-600" /> Kluster:
           </span>
           {CLUSTERS.map((c) => {
             const isSelected = selectedCluster === c.id;
@@ -187,8 +187,8 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
                 onClick={() => setSelectedCluster(c.id)}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
                   isSelected
-                    ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-[0_0_15px_rgba(6,182,212,0.35)]"
-                    : "bg-slate-950/60 text-slate-400 hover:text-white hover:bg-slate-800/60 border border-white/5"
+                    ? "bg-blue-600 text-white shadow-sm font-bold"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
                 }`}
               >
                 {c.name}
@@ -200,21 +200,21 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
 
       {/* Results Status Bar */}
       <div className="flex flex-wrap items-center justify-between gap-4 px-2">
-        <div className="text-sm text-slate-300">
-          Menampilkan <span className="font-bold text-white">{filteredRoadmaps.length}</span> dari {initialRoadmaps.length} inisiatif roadmap
+        <div className="text-sm text-slate-600">
+          Menampilkan <span className="font-bold text-slate-900">{filteredRoadmaps.length}</span> dari {initialRoadmaps.length} inisiatif roadmap
           {hasActiveFilters && (
             <button
               onClick={resetFilters}
-              className="ml-3 text-xs text-cyan-400 hover:underline inline-flex items-center gap-1 font-semibold"
+              className="ml-3 text-xs text-blue-600 hover:underline inline-flex items-center gap-1 font-semibold"
             >
               Reset Filter
             </button>
           )}
         </div>
 
-        <div className="p-2.5 px-4 rounded-xl bg-slate-900/80 border border-emerald-500/30 shadow-[0_0_15px_rgba(16,185,129,0.1)] flex items-center gap-3">
-          <div className="text-xs text-slate-400">Total Potensi Terpilih:</div>
-          <div className="text-base font-black text-emerald-400 font-mono tracking-tight">
+        <div className="p-2.5 px-4 rounded-xl bg-white border border-emerald-200 shadow-sm flex items-center gap-3">
+          <div className="text-xs text-slate-500">Total Potensi Terpilih:</div>
+          <div className="text-base font-black text-emerald-700 font-mono tracking-tight">
             {formatRupiah(totalFilteredRevenue)}
           </div>
         </div>
@@ -228,11 +228,11 @@ export default function RoadmapClient({ initialRoadmaps }: Props) {
           ))}
         </div>
       ) : (
-        <div className="bg-slate-900/80 rounded-3xl p-12 text-center border border-white/10 shadow-lg space-y-3">
-          <p className="text-slate-400 text-sm">Tidak ada inisiatif yang cocok dengan kriteria pencarian.</p>
+        <div className="bg-white rounded-3xl p-12 text-center border border-slate-200 shadow-sm space-y-3">
+          <p className="text-slate-600 text-sm">Tidak ada inisiatif yang cocok dengan kriteria pencarian.</p>
           <button
             onClick={resetFilters}
-            className="px-4 py-2 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-bold"
+            className="px-4 py-2 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold hover:bg-blue-100"
           >
             Reset Semua Filter
           </button>

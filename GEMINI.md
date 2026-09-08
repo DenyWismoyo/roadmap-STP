@@ -89,12 +89,15 @@ Struktur Isi Konten Markdown Wajib Terdiri dari:
 ---
 
 ## 5. Pedoman Visual & Desain Web
-- **Aura Desain**: *Futuristic Civic Innovation* — perpaduan wibawa institusi pemerintah daerah dengan kemajuan teknologi mutakhir technopark kelas dunia.
+- **Aura Desain**: *Executive Clean White Theme* — perpaduan naskah resmi kepemerintahan (White Paper Dossier) dengan keanggunan modern technopark kelas dunia.
 - **Warna Utama**:
-  - Background: Dark Slate / Deep Navy (`#030712`, `#0a1128`, `#0f172a`)
-  - Aksen Brand: Solo Technopark Blue (`#1e40af`, `#3b82f6`), Neon Cyan (`#06b6d4`, `#22d3ee`)
-  - Aksen Finansial / Surplus: Emerald Tech (`#10b981`, `#34d399`)
-  - Aksen Regulasi & Nilai Tinggi: Sunset Amber / Gold (`#f59e0b`, `#fbbf24`)
+  - Background: Putih Bersih & Off-White (`#ffffff`, `#f8fafc`, `#f1f5f9`)
+  - Kartu & Permukaan: Pure White (`#ffffff`) dengan border halus (`#e2e8f0`) dan bayangan lembut
+  - Tipografi: Headings pekat Slate-950 (`#020617`), Body text kontras tinggi Slate-700 (`#334155`)
+  - Aksen Brand: Solo Technopark Royal Blue (`#1e40af`, `#2563eb`), Precision Sky (`#0284c7`)
+  - Aksen Finansial / Surplus: Emerald Forest (`#059669`, `#10b981`)
+  - Aksen Regulasi: Policy Amber (`#d97706`, `#f59e0b`)
+  - Aksen Dampak Publik: Crimson Rose (`#e11d48`, `#f43f5e`)
 - **Navigasi Wajib**:
   - Dashboard Eksekutif (`/`)
   - Direktori 25 Inisiatif Roadmap (`/roadmap`)

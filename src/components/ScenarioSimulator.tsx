@@ -53,58 +53,58 @@ export default function ScenarioSimulator() {
       name: "Baseline Rutin",
       prob: "100%",
       desc: "Hanya 8 program dasar tanpa terobosan regulasi baru",
-      badgeColor: "border-slate-600 bg-slate-800/80 text-slate-300",
-      accent: "text-slate-300",
-      borderActive: "border-slate-400 bg-slate-800/80 shadow-[0_0_15px_rgba(255,255,255,0.1)]",
+      badgeColor: "border-slate-300 bg-slate-100 text-slate-700",
+      accent: "text-slate-700",
+      borderActive: "border-slate-400 bg-slate-50 shadow-sm",
     },
     A: {
       name: "Skenario A (Konservatif)",
       prob: "90%",
       desc: "Realisasi 70% inisiatif terobosan baru secara bertahap",
-      badgeColor: "border-cyan-500/30 bg-cyan-950/60 text-cyan-300",
-      accent: "text-cyan-400",
-      borderActive: "border-cyan-500 bg-cyan-950/40 shadow-[0_0_20px_rgba(6,182,212,0.25)]",
+      badgeColor: "border-blue-200 bg-blue-50 text-blue-800",
+      accent: "text-blue-700",
+      borderActive: "border-blue-400 bg-blue-50/50 shadow-sm",
     },
     B: {
       name: "Skenario B (Progresif - Rekomendasi)",
       prob: "75%",
       desc: "Realisasi 85% inisiatif didukung percepatan regulasi Perwali",
-      badgeColor: "border-emerald-500/30 bg-emerald-950/60 text-emerald-300",
-      accent: "text-emerald-400",
-      borderActive: "border-emerald-500 bg-emerald-950/40 shadow-[0_0_20px_rgba(16,185,129,0.25)]",
+      badgeColor: "border-emerald-200 bg-emerald-50 text-emerald-800",
+      accent: "text-emerald-700",
+      borderActive: "border-emerald-500 bg-emerald-50/50 shadow-sm",
     },
     C: {
       name: "Skenario C (Agresif Penuh)",
       prob: "60%",
       desc: "100% Inisiatif terobosan terealisasi penuh dengan dukungan Walikota",
-      badgeColor: "border-amber-500/30 bg-amber-950/60 text-amber-300",
-      accent: "text-amber-400",
-      borderActive: "border-amber-500 bg-amber-950/40 shadow-[0_0_20px_rgba(245,158,11,0.25)]",
+      badgeColor: "border-amber-200 bg-amber-50 text-amber-800",
+      accent: "text-amber-700",
+      borderActive: "border-amber-500 bg-amber-50/50 shadow-sm",
     },
   };
 
   return (
-    <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-5 sm:p-8 lg:p-10 bg-slate-900/80 backdrop-blur-2xl border-y sm:border-x border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.6)] relative overflow-hidden">
+    <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-5 sm:p-8 lg:p-10 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm relative overflow-hidden">
       {/* Subtle background glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl pointer-events-none" />
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10 relative z-10">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100 relative z-10">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-2 shadow-[0_0_10px_rgba(6,182,212,0.2)]">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             Interactive Fiscal Engine
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
             Simulasi Skenario Pertumbuhan Pendapatan BLUD
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400 mt-1">
+          <p className="text-xs sm:text-sm text-slate-500 mt-1">
             Uji sensitivitas fiskal proyeksi kemandirian anggaran UPTD KST STP (2026–2030)
           </p>
         </div>
 
         {/* Year Selector Tabs */}
-        <div className="flex items-center gap-1.5 p-1.5 bg-slate-950/80 rounded-2xl border border-white/10 self-start md:self-auto shadow-inner">
+        <div className="flex items-center gap-1.5 p-1.5 bg-slate-100 rounded-2xl border border-slate-200 self-start md:self-auto shadow-inner">
           {[2026, 2027, 2028, 2029, 2030].map((yr) => (
             <button
               key={yr}
@@ -114,8 +114,8 @@ export default function ScenarioSimulator() {
               }}
               className={`px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 selectedYear === yr
-                  ? "bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-[0_0_15px_rgba(6,182,212,0.4)]"
-                  : "text-slate-400 hover:text-white hover:bg-slate-800/50"
+                  ? "bg-blue-600 text-white shadow-sm font-bold"
+                  : "text-slate-600 hover:text-slate-900 hover:bg-white/60"
               }`}
             >
               {yr}
@@ -141,7 +141,7 @@ export default function ScenarioSimulator() {
               className={`p-4 rounded-2xl text-left border transition-all duration-200 flex flex-col justify-between ${
                 isSelected
                   ? meta.borderActive
-                  : "bg-slate-950/50 border-white/10 hover:border-white/20 hover:bg-slate-800/40"
+                  : "bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50"
               }`}
             >
               <div>
@@ -149,10 +149,10 @@ export default function ScenarioSimulator() {
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${meta.badgeColor}`}>
                     Probabilitas {meta.prob}
                   </span>
-                  {isSelected && <CheckCircle2 className="w-4 h-4 text-cyan-400" />}
+                  {isSelected && <CheckCircle2 className="w-4 h-4 text-blue-600" />}
                 </div>
-                <div className="text-sm font-bold text-white mb-1">{meta.name}</div>
-                <div className="text-[11px] text-slate-400 leading-snug line-clamp-2">{meta.desc}</div>
+                <div className="text-sm font-bold text-slate-900 mb-1">{meta.name}</div>
+                <div className="text-[11px] text-slate-500 leading-snug line-clamp-2">{meta.desc}</div>
               </div>
             </motion.button>
           );
@@ -162,16 +162,16 @@ export default function ScenarioSimulator() {
       {/* Main Results Board */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pt-2 relative z-10">
         {/* Metric 1: Total Revenue */}
-        <div className="p-6 rounded-2xl bg-gradient-to-b from-blue-950/40 to-slate-900/60 border border-cyan-500/30 shadow-[0_0_20px_rgba(6,182,212,0.1)] relative overflow-hidden">
-          <div className="text-xs font-bold text-cyan-300 uppercase tracking-wider mb-1 flex items-center justify-between">
+        <div className="p-6 rounded-2xl bg-blue-50/60 border border-blue-200 shadow-sm relative overflow-hidden">
+          <div className="text-xs font-bold text-blue-700 uppercase tracking-wider mb-1 flex items-center justify-between">
             <span>Proyeksi Pendapatan ({selectedYear})</span>
-            <TrendingUp className="w-4 h-4 text-cyan-400" />
+            <TrendingUp className="w-4 h-4 text-blue-600" />
           </div>
-          <div className="text-3xl sm:text-4xl font-black text-cyan-400 my-2 font-mono tracking-tight">
+          <div className="text-3xl sm:text-4xl font-black text-blue-700 my-2 font-mono tracking-tight">
             {formatRupiah(revenue)}
           </div>
-          <div className="text-xs text-slate-300 flex items-center gap-1.5 mt-2">
-            <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <div className="text-xs text-slate-600 flex items-center gap-1.5 mt-2">
+            <span className="w-2 h-2 rounded-full bg-blue-600"></span>
             {selectedYear === 2030 && selectedScenario === "C"
               ? "🎯 Target Terobosan Tertinggi Rp 50,5 Miliar"
               : `Baseline Rp ${Math.round(currentData.baseline / 1e9)} M + Inisiatif Baru`}
@@ -179,44 +179,44 @@ export default function ScenarioSimulator() {
         </div>
 
         {/* Metric 2: Surplus Operasional */}
-        <div className="p-6 rounded-2xl bg-gradient-to-b from-emerald-950/40 to-slate-900/60 border border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.1)] relative overflow-hidden">
-          <div className="text-xs font-bold text-emerald-300 uppercase tracking-wider mb-1 flex items-center justify-between">
+        <div className="p-6 rounded-2xl bg-emerald-50/60 border border-emerald-200 shadow-sm relative overflow-hidden">
+          <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1 flex items-center justify-between">
             <span>Surplus Mandiri Bersih BLUD</span>
-            <DollarSign className="w-4 h-4 text-emerald-400" />
+            <DollarSign className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-3xl sm:text-4xl font-black text-emerald-400 my-2 font-mono tracking-tight">
+          <div className="text-3xl sm:text-4xl font-black text-emerald-700 my-2 font-mono tracking-tight">
             {formatRupiah(surplus)}
           </div>
-          <div className="text-xs text-slate-300 mt-2">
-            Setelah belanja pokok: <span className="text-emerald-300 font-semibold">{formatRupiah(expense)}</span>
+          <div className="text-xs text-slate-600 mt-2">
+            Setelah belanja pokok: <span className="text-emerald-800 font-semibold">{formatRupiah(expense)}</span>
           </div>
         </div>
 
         {/* Metric 3: Estimasi Dividen PAD ke Kasda */}
-        <div className="p-6 rounded-2xl bg-gradient-to-b from-amber-950/40 to-slate-900/60 border border-amber-500/30 shadow-[0_0_20px_rgba(245,158,11,0.1)] relative overflow-hidden">
-          <div className="text-xs font-bold text-amber-300 uppercase tracking-wider mb-1 flex items-center justify-between">
+        <div className="p-6 rounded-2xl bg-amber-50/60 border border-amber-200 shadow-sm relative overflow-hidden">
+          <div className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-1 flex items-center justify-between">
             <span>Estimasi Dividen PAD Kasda</span>
-            <Building className="w-4 h-4 text-amber-400" />
+            <Building className="w-4 h-4 text-amber-600" />
           </div>
-          <div className="text-3xl sm:text-4xl font-black text-amber-300 my-2 font-mono tracking-tight">
+          <div className="text-3xl sm:text-4xl font-black text-amber-700 my-2 font-mono tracking-tight">
             {formatRupiah(padContribution)}
           </div>
-          <div className="text-xs text-slate-300 mt-2">
+          <div className="text-xs text-slate-600 mt-2">
             Asumsi dividen 20% surplus disetor ke Pemkot
           </div>
         </div>
       </div>
 
       {/* 5-Year Trajectory Bar Chart */}
-      <div className="mt-8 pt-6 border-t border-white/10 relative z-10">
+      <div className="mt-8 pt-6 border-t border-slate-100 relative z-10">
         <div className="flex items-center justify-between mb-4">
-          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700">
             Lintasan Pertumbuhan 5 Tahun (2026 – 2030) dalam Skenario Ini:
           </h4>
           {selectedScenario === "C" && (
             <button
               onClick={triggerCelebration}
-              className="text-xs text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1 active:scale-95 transition-transform"
+              className="text-xs text-amber-700 hover:text-amber-800 font-bold flex items-center gap-1 active:scale-95 transition-transform"
             >
               <Sparkles className="w-3.5 h-3.5" />
               Rayakan Target 2030
@@ -236,10 +236,10 @@ export default function ScenarioSimulator() {
                 onClick={() => setSelectedYear(d.year)}
                 className="cursor-pointer group flex flex-col items-center justify-end h-full"
               >
-                <div className="text-[10px] sm:text-xs font-bold text-slate-300 group-hover:text-cyan-300 mb-2 transition-colors font-mono">
+                <div className="text-[10px] sm:text-xs font-bold text-slate-700 group-hover:text-blue-600 mb-2 transition-colors font-mono">
                   {formatRupiah(yrRev, true)}
                 </div>
-                <div className="w-full bg-slate-950/80 border border-white/5 rounded-t-xl overflow-hidden h-32 flex items-end p-1">
+                <div className="w-full bg-slate-100 border border-slate-200 rounded-t-xl overflow-hidden h-32 flex items-end p-1 shadow-inner">
                   <motion.div
                     layout
                     initial={{ height: 0 }}
@@ -247,14 +247,14 @@ export default function ScenarioSimulator() {
                     transition={{ duration: 0.4 }}
                     className={`w-full rounded-t-lg transition-all ${
                       isCurr
-                        ? "bg-gradient-to-t from-blue-600 via-cyan-500 to-sky-400 shadow-[0_0_15px_rgba(6,182,212,0.5)]"
-                        : "bg-slate-700/60 group-hover:bg-cyan-600/50"
+                        ? "bg-gradient-to-t from-blue-700 via-blue-500 to-sky-400 shadow-md"
+                        : "bg-slate-300 group-hover:bg-blue-300"
                     }`}
                   />
                 </div>
                 <div
                   className={`mt-2 text-xs font-bold transition-colors ${
-                    isCurr ? "text-cyan-400 font-extrabold" : "text-slate-400 group-hover:text-slate-200"
+                    isCurr ? "text-blue-700 font-extrabold" : "text-slate-500 group-hover:text-slate-800"
                   }`}
                 >
                   {d.year}
