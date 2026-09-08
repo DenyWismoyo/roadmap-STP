@@ -103,3 +103,22 @@ export interface SROIBreakdown {
   description: string;
 }
 
+export interface PublicImpactDocItem {
+  slug: string;
+  id: string;
+  number: number;
+  title: string;
+  sector: string;
+  badge?: string;
+  annual_social_value?: number;
+  beneficiaries_count?: string;
+  sroi_ratio?: number;
+  cross_subsidized_by?: string;
+  legal_basis?: string;
+  pic?: string;
+  target_group?: string;
+  summary: string;
+  content: string;
+}
+
+

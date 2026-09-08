@@ -15,7 +15,10 @@ import {
   Zap,
   Building2,
   Layers,
+  BookOpen,
+  FileText,
 } from "lucide-react";
+import { getAllPublicImpactDocs } from "@/lib/markdown";
 import {
   PUBLIC_IMPACT_SECTORS,
   SROI_BREAKDOWN,
@@ -30,6 +33,15 @@ export const metadata = {
 };
 
 export default function PublicImpactPage() {
+  const publicImpactDocs = getAllPublicImpactDocs();
+
+  const sectorSlugMap: Record<string, string> = {
+    "warga-rentan": "pemberdayaan-masyarakat-dan-kaum-rentan",
+    "umkm-pengrajin": "akselerasi-umkm-dan-pengrajin-tradisional",
+    "industri-kampus": "penguatan-industri-lokal-dan-bengkel-rakyat",
+    "komunitas-pemuda": "fasilitasi-komunitas-kreatif-dan-pemuda",
+  };
+
   return (
     <div className="app-container py-12 space-y-12">
       {/* EXECUTIVE HEADER */}
@@ -329,6 +341,20 @@ export default function PublicImpactPage() {
                       </div>
                     ))}
                   </div>
+
+                  {/* Link to Full Markdown Dossier */}
+                  <div className="pt-3 border-t border-white/10">
+                    <Link
+                      href={`/dampak-publik/${sectorSlugMap[sector.id] || "kerangka-akuntabilitas-sroi-dan-subsidi-silang"}`}
+                      className="w-full py-2.5 px-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-cyan-300 hover:text-white font-bold text-xs flex items-center justify-between transition-all group/btn"
+                    >
+                      <span className="flex items-center gap-2">
+                        <BookOpen className="w-3.5 h-3.5 text-cyan-400" />
+                        Buka Dokumen Naskah Lengkap (.md)
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             );
@@ -406,6 +432,60 @@ export default function PublicImpactPage() {
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      {/* 5 OFFICIAL MARKDOWN DOSSIERS DIRECTORY */}
+      <div className="space-y-6">
+        <div className="space-y-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-xs font-bold text-slate-300">
+            <FileText className="w-3.5 h-3.5 text-rose-400" />
+            Naskah Kebijakan Resmi di `content/dampak-publik/*.md`
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-white">
+            Arsip 5 Dokumen Naskah Kebijakan Publik (.md)
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-400">
+            Naskah kebijakan formal berpalet putih eksekutif siap cetak / ekspor PDF untuk Walikota, DPRD, dan BPK RI.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {publicImpactDocs.map((doc) => (
+            <Link
+              key={doc.slug}
+              href={`/dampak-publik/${doc.slug}`}
+              className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-slate-900/80 hover:bg-slate-800/90 border-y sm:border-x border-white/10 hover:border-rose-500/40 hover:shadow-[0_0_25px_rgba(244,63,94,0.15)] transition-all group flex flex-col justify-between space-y-4"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="w-7 h-7 rounded-lg bg-slate-800 border border-white/10 flex items-center justify-center text-xs font-black text-white font-mono">
+                    #{doc.number}
+                  </span>
+                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-950/60 text-rose-300 border border-rose-500/30">
+                    {doc.sector}
+                  </span>
+                </div>
+
+                <h3 className="font-bold text-sm text-white group-hover:text-rose-300 transition-colors line-clamp-2">
+                  {doc.title}
+                </h3>
+
+                <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
+                  {doc.summary}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-white/5 flex items-center justify-between text-xs">
+                <span className="text-emerald-400 font-mono font-bold">
+                  {doc.annual_social_value ? formatRupiah(doc.annual_social_value, true) : "Kerangka SROI"}
+                </span>
+                <span className="text-cyan-400 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Buka Naskah <ArrowRight className="w-3.5 h-3.5" />
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
 
