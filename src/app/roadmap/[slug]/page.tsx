@@ -69,11 +69,11 @@ export default async function RoadmapDetailPage({ params }: Props) {
           className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-cyan-300 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          Kembali ke Direktori 20 Inisiatif
+          Kembali ke Direktori 25 Inisiatif
         </Link>
 
         <div className="flex items-center gap-2 text-xs text-slate-400">
-          <span>Inisiatif #{roadmap.number} dari 20</span>
+          <span>Inisiatif #{roadmap.number} dari 25</span>
         </div>
       </div>
 

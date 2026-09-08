@@ -36,9 +36,9 @@ Platform web dan seluruh dokumen Markdown roadmap tidak sekadar memaparkan "ide 
 Semua angka dan metrik finansial pada platform ini harus patuh pada parameter rujukan:
 1. **Target Agregat Pendapatan 2030 (Skala Penuh)**:
    - **Baseline Rutin (8 Inisiatif)**: Rp 28.000.000.000 / tahun.
-   - **Terobosan Agresif Baru (12 Inisiatif)**: Rp 29.500.000.000 / tahun (termasuk GovTech SaaS & Enterprise AI Exchange).
+   - **Terobosan Agresif Baru (17 Inisiatif)**: Rp 39.500.000.000 / tahun (termasuk GovTech SaaS, Enterprise AI, Inclusive Tech Talent, Agritech, Circular E-Waste, Creative IP, dan HealthTech).
    - **Target Komitmen Minimum**: **Rp 50.500.000.000 / tahun**.
-   - **Total Agregat Target Maksimal (Full Scale Horizon)**: **Rp 57.500.000.000 / tahun**.
+   - **Total Agregat Target Maksimal (Full Scale Horizon)**: **Rp 67.500.000.000 / tahun**.
 2. **Kemandirian Fiskal**:
    - Pagu APBD murni 2026 hanya tersisa Rp 103 Juta (0,39%), sementara BLUD mencapai Rp 26,52 Miliar (99,61%).
    - Menghilangkan defisit operasional Rp 2,4 Miliar sejak 2026 melalui percepatan regulasi Walikota.
@@ -48,7 +48,7 @@ Semua angka dan metrik finansial pada platform ini harus patuh pada parameter ru
    - **Baseline**: Rp 7,48 M (2026) -> Rp 28,00 M (2030)
    - **Skenario A - Konservatif (90%)**: Rp 9,93 M (2026) -> Rp 43,75 M (2030)
    - **Skenario B - Progresif / Realistis (75%)**: Rp 10,46 M (2026) -> Rp 47,13 M (2030)
-   - **Skenario C - Agresif Penuh (60%)**: Rp 10,98 M (2026) -> Rp 50,50 M s.d. Rp 57,50 M (2030)
+   - **Skenario C - Agresif Penuh (60%)**: Rp 10,98 M (2026) -> Rp 50,50 M s.d. Rp 67,50 M (2030)
 
 ---
 
@@ -57,7 +57,7 @@ Setiap inisiatif roadmap wajib memiliki berkas Markdown tersendiri dengan Frontm
 ```yaml
 ---
 id: "slug-unik"
-number: 1 # urutan nomor 1 s.d. 20
+number: 1 # urutan nomor 1 s.d. 25
 title: "Judul Resmi Inisiatif"
 category: "Baseline Strategic | Aggressive Breakthrough"
 cluster: "Aset & Properti | Diklat & Sertifikasi | AI & Green Tech | MICE & Komersial | Kemitraan Global"
@@ -97,7 +97,7 @@ Struktur Isi Konten Markdown Wajib Terdiri dari:
   - Aksen Regulasi & Nilai Tinggi: Sunset Amber / Gold (`#f59e0b`, `#fbbf24`)
 - **Navigasi Wajib**:
   - Dashboard Eksekutif (`/`)
-  - Direktori 20 Inisiatif Roadmap (`/roadmap`)
+  - Direktori 25 Inisiatif Roadmap (`/roadmap`)
   - Paket Rekomendasi Regulasi Walikota (`/regulasi`)
   - Simulasi Finansial Interaktif (`/simulasi`)
   - Transformasi Kelembagaan (`/kelembagaan`)

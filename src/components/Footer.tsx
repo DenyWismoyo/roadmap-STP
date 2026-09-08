@@ -86,7 +86,7 @@ export default function Footer() {
             <div className="p-4 rounded-2xl bg-slate-900/80 border border-emerald-500/30 shadow-[0_0_20px_rgba(16,185,129,0.1)] space-y-2">
               <div className="text-xs text-slate-400">Target Agregat Pendapatan:</div>
               <div className="text-xl font-black text-emerald-400 font-mono tracking-tight">
-                Rp 50,5 M – 57,5 M
+                Rp 50,5 M – 67,5 M
               </div>
               <div className="text-xs text-slate-300 pt-1.5 border-t border-white/10">
                 Kemandirian Penuh BLUD: <span className="text-emerald-400 font-bold">99,61%</span>

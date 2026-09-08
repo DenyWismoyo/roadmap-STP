@@ -67,7 +67,7 @@ export default function HomePage() {
               className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 active:scale-95 text-white font-bold text-xs uppercase tracking-wider shadow-[0_0_25px_rgba(37,99,235,0.4)] transition-all flex items-center gap-2"
             >
               <Layers className="w-4 h-4" />
-              20 Inisiatif Roadmap
+              25 Inisiatif Roadmap
             </Link>
 
             <Link
@@ -97,10 +97,10 @@ export default function HomePage() {
               <TrendingUp className="w-4 h-4 text-cyan-400" />
             </div>
             <div className="text-2xl lg:text-3xl font-black text-white my-2 font-mono">
-              Rp 50,5M - 57,5M
+              Rp 50,5M - 67,5M
             </div>
             <div className="text-xs text-slate-400 leading-relaxed">
-              Rp 28 M Baseline + Rp 29,5 M Terobosan Baru
+              Rp 28 M Baseline + Rp 39,5 M Terobosan Baru
             </div>
           </div>
 
@@ -125,10 +125,10 @@ export default function HomePage() {
               <Layers className="w-4 h-4 text-amber-400" />
             </div>
             <div className="text-3xl lg:text-4xl font-black text-white my-2 font-mono">
-              20 Program
+              25 Program
             </div>
             <div className="text-xs text-slate-400 leading-relaxed">
-              12 Terobosan Agresif + 8 Inisiatif Baseline
+              17 Terobosan Agresif + 8 Inisiatif Baseline
             </div>
           </div>
 
@@ -250,7 +250,7 @@ export default function HomePage() {
               Siap Mendorong Penerbitan Regulasi Baru untuk Walikota Surakarta?
             </h3>
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto">
-              Pelajari draf 3 Gelombang Regulasi (Quick Wins 2026, Paket Perwali 2027, dan Transformasi Net-Zero AI 2028) yang siap diajukan ke Bagian Hukum Setda Kota Surakarta.
+              Pelajari draf 4 Gelombang Regulasi (Quick Wins 2026, Paket Perwali 2027, Transformasi Net-Zero AI 2028, dan Smart Hub Inklusif 2027–2028) yang siap diajukan ke Bagian Hukum Setda Kota Surakarta.
             </p>
             <div className="pt-3 flex flex-wrap justify-center gap-3.5">
               <Link
@@ -263,7 +263,7 @@ export default function HomePage() {
                 href="/roadmap"
                 className="px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider border border-white/20 transition-all shadow-md"
               >
-                Direktori 20 Roadmap
+                Direktori 25 Roadmap
               </Link>
             </div>
           </div>

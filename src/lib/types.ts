@@ -56,7 +56,7 @@ export interface HistoricalBudgetData {
 export interface RegulatoryWave {
   wave: string;
   timeline: string;
-  status: "Quick Win (2026)" | "Agenda Prioritas (2027)" | "Konsolidasi (2028)";
+  status: "Quick Win (2026)" | "Agenda Prioritas (2027)" | "Konsolidasi (2028)" | "Smart Hub & Inklusi (2027–2028)";
   color: string;
   badgeBg: string;
   title: string;

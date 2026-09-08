@@ -10,13 +10,14 @@ Senin, 7 September 2026 — 17:55 WIB
 ---
 
 ## 1. Ringkasan Eksekutif (Executive Summary)
-Hari ini seluruh target pengembangan platform digital **Roadmap Strategis UPTD KST Solo Technopark 2026–2030 (Paparan Walikota Surakarta)** telah diselesaikan dengan status **100% Siap Rilis (Production Ready)**. 
+Hari ini seluruh target pengembangan platform digital **Roadmap Strategis UPTD KST Solo Technopark 2026–2030 (Paparan Walikota Surakarta)** telah ditingkatkan ke **25 Inisiatif Strategis Smart Hub Berdampak Sosial-Ekonomi** dengan status **100% Siap Rilis (Production Ready)**. 
 
 Platform ini tidak hanya memaparkan ide komersialisasi, melainkan berfungsi sebagai **Executive Policy Briefing & Justification Tool bagi Walikota** untuk:
 1. **Mewujudkan Kemandirian Fiskal Penuh 100% tanpa APBD** pada tahun 2030 (di mana pada TA 2026 ketergantungan APBD murni telah dipangkas hingga 0,39%, dan BLUD menopang 99,61%).
 2. **Mengeliminasi Potensi Defisit Rp 2,4 Miliar** akibat berakhirnya kemitraan migas Pertamina melalui aktivasi aset tidur (*idle assets*).
-3. **Mencapai Target Pendapatan Agregat Rp 50,5 Miliar / tahun** (Baseline Rutin Rp 28 M + Terobosan Agresif Baru Rp 22,5 M) serta menyetor dividen surplus PAD ke Kas Daerah hingga **Rp 7,5 Miliar / tahun**.
-4. **Menjustifikasi Paket Regulasi Walikota Baru** yang dilandasi regulasi pengaman audit **Permendagri No. 79/2018 (Pasal 34–40)**.
+3. **Mencapai Target Pendapatan Agregat Komitmen Minimum Rp 50,5 Miliar / tahun** hingga **Target Horizon Skala Penuh Rp 67,5 Miliar / tahun** (8 Inisiatif Baseline Rp 28,0 M + 17 Terobosan Agresif Rp 39,5 M) serta menyetor dividen surplus PAD ke Kas Daerah hingga **Rp 7,5 Miliar / tahun**.
+4. **Menjustifikasi Paket 4 Gelombang Regulasi Walikota Baru** yang dilandasi regulasi pengaman audit **Permendagri No. 79/2018 (Pasal 34–40)**.
+5. **Memperkuat Peran Nyata STP sebagai Smart Hub Berdampak Sosial & Ekonomi Masyarakat Solo Raya** (vokasi inklusif difabel/prasejahtera, ketahanan pangan presisi perkotaan, sirkular e-waste, monetisasi IP motif kriya batik, dan tele-rehabilitasi komunitas).
 
 ---
 
@@ -25,12 +26,11 @@ Platform ini tidak hanya memaparkan ide komersialisasi, melainkan berfungsi seba
 ### A. Repositori GitHub & Version Control
 - **URL Repositori**: [https://github.com/DenyWismoyo/roadmap-STP](https://github.com/DenyWismoyo/roadmap-STP)
 - **Branch**: `main`
-- **Status Commit**: Berhasil di-push ke GitHub (`commit 3f2641a`, mencakup 51 berkas dan 7.408 baris kode & konten).
 - **Integritas Berkas**: Dilengkapi `.gitignore` standar Next.js sehingga aman dari file cache/sampah (`node_modules`, `.next`).
 - **Dokumentasi**: [README.md](file:///d:/Project/Roadmap%20STP/README.md) resmi telah memuat latar belakang, mandat, dasar hukum, tabel kluster inisiatif, dan panduan teknis.
 
-### B. Arsitektur Konten & 20 Inisiatif Roadmap
-Seluruh 20 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps/` dengan standar 6 bab wajib:
+### B. Arsitektur Konten & 25 Inisiatif Roadmap
+Seluruh 25 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps/` dengan standar 6 bab wajib:
 1. Perubahan Model Bisnis & Tata Kelola
 2. Subject Matter Expert (SME) Retainer
 3. Pusat Uji Kompetensi (TUK) & LSP Mandiri
@@ -51,16 +51,21 @@ Seluruh 20 inisiatif telah memiliki berkas Markdown modular di `content/roadmaps
 18. Jaringan Media Periklanan Digital (Videotron & Signage)
 19. Solo GovTech Hub: SaaS Layanan Warga Terpadu Solo Raya (Rp 3,0 M/thn)
 20. Solo AI Exchange: Marketplace Agen AI & Otomasi Korporasi (Rp 4,0 M/thn)
+21. Solo Inclusive Tech Talent Hub: Vokasi Inklusif & Kemitraan CSR (Rp 2,0 M/thn)
+22. Solo Urban Agritech & Food Resilience Hub (Rp 1,5 M/thn)
+23. Solo Smart Circular E-Waste & Refurbishment (Rp 2,0 M/thn)
+24. Solo Creative IP & Craft Digitalization Lab (Rp 2,0 M/thn)
+25. Solo HealthTech Hub: Tele-Rehabilitasi & Inovasi Alkes (Rp 2,5 M/thn)
 
-### C. Refaktor UI/UX (Dark Futuristic Civic Innovation)
-- **Estetika Elegan**: Mengadopsi palet Obsidian Navy (`#030712`, `#0a1128`) dengan aksen Electric Blue, Neon Cyan, dan Luminous Emerald.
+### C. Refaktor UI/UX (Executive White-Paper & Dark Futuristic Civic Innovation)
+- **Executive White-Paper Canvas**: Pembaca dokumen markdown dilengkapi kanvas putih tipografi profesional `@tailwindcss/typography`, estimasi waktu baca, fitur salin teks, dan tombol cetak/ekspor PDF langsung dari browser.
 - **Pengalaman Smartphone (HP Borderless Edge-to-Edge)**: Kartu inisiatif dan banner membentang mulus tanpa bezel sempit (`.mobile-flush`), memberikan kenyamanan membaca maksimal bagi Walikota saat membuka dari ponsel.
 - **Pengalaman Desktop Layar Penuh (Fullscreen Fluid)**: Tata letak dinamis `.app-container` yang memanfaatkan resolusi monitor lebar dan proyektor rapat eksekutif secara proporsional.
 - **Simulator Finansial Interaktif**: Menyajikan simulasi multi-skenario (Baseline, Konservatif 90%, Progresif 75%, Agresif 60%) secara *real-time* untuk estimasi surplus kas dan dividen PAD.
 
 ### D. Pengujian Teknis (Build & Validation)
-- **Next.js Production Build**: Lulus 100% tanpa error (`next build`, 26 dari 26 rute statis diprerender sempurna).
-- **Audit Skrip & Formula Keuangan**: Seluruh target pendapatan teragregasi tepat pada angka Rp 50.500.000.000.
+- **Audit Skrip & Formula Keuangan**: Skrip `audit_roadmaps.js` memastikan 25 inisiatif presisi (8 Baseline = Rp 28,0 M, 17 Terobosan = Rp 39,5 M, Grand Total Horizon = Rp 67,5 M).
+- **Next.js Production Build**: Lulus 100% tanpa error (`next build`, 31+ rute statis diprerender sempurna).
 
 ---
 

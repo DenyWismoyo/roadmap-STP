@@ -21,7 +21,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/", label: "Executive Dashboard", icon: Sparkles },
-    { href: "/roadmap", label: "20 Inisiatif Roadmap", icon: Compass },
+    { href: "/roadmap", label: "25 Inisiatif Roadmap", icon: Compass },
     { href: "/regulasi", label: "Paket Regulasi Walikota", icon: Gavel },
     { href: "/simulasi", label: "Simulasi Finansial 2026–2030", icon: TrendingUp },
     { href: "/kelembagaan", label: "Transformasi Kelembagaan", icon: Landmark },

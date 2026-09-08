@@ -56,9 +56,9 @@ export default function RegulatoryRoadmapPage() {
             <FileCheck2 className="w-4 h-4 text-blue-400" />
             2. Apa Solusi Konkretnya?
           </div>
-          <h3 className="text-base font-bold text-white">Paket 3 Gelombang Regulasi</h3>
+          <h3 className="text-base font-bold text-white">Paket 4 Gelombang Regulasi</h3>
           <p className="text-xs text-slate-300 leading-relaxed">
-            Walikota menerbitkan 3 Gelombang Kebijakan: Quick Wins 2026 (SK Penyesuaian BGS & SE Sertifikasi), Paket Perwali 2027 (Retribusi RS & Naming Rights), serta Instruksi Net-Zero & AI Hub (2028).
+            Walikota menerbitkan 4 Gelombang Kebijakan: Quick Wins 2026, Paket Perwali Komersial 2027, Transformasi Hijau & AI Hub 2028, serta Regulasi Afirmatif Smart Hub & Inklusi Sosial-Ekonomi (2027–2028).
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function RegulatoryRoadmapPage() {
         </Link>
       </div>
 
-      {/* 3 WAVES OF REGULATORY ENABLERS */}
+      {/* 4 WAVES OF REGULATORY ENABLERS */}
       <div className="space-y-8">
         <div className="space-y-1">
           <h2 className="text-2xl sm:text-3xl font-black text-white">
@@ -122,7 +122,9 @@ export default function RegulatoryRoadmapPage() {
                       ? "bg-amber-950/60 text-amber-300 border-amber-500/30"
                       : wIdx === 1
                       ? "bg-blue-950/60 text-cyan-300 border-cyan-500/30"
-                      : "bg-emerald-950/60 text-emerald-300 border-emerald-500/30"
+                      : wIdx === 2
+                      ? "bg-emerald-950/60 text-emerald-300 border-emerald-500/30"
+                      : "bg-purple-950/60 text-purple-300 border-purple-500/30"
                   }`}>
                     {wave.status}
                   </span>

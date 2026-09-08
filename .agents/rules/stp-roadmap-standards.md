@@ -23,7 +23,7 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
 ---
 
 1. **Mandat Walikota & Kemandirian Fiskal**:
-   - STP ditargetkan mandiri 100% tanpa APBD, mencapai target baseline minimum Rp 50,5 Miliar hingga skala penuh Rp 57,5 Miliar pada 2030 (Rp 28M Baseline 8 Inisiatif + Rp 29,5M Terobosan Agresif 12 Inisiatif).
+   - STP ditargetkan mandiri 100% tanpa APBD, mencapai target baseline minimum Rp 50,5 Miliar hingga skala penuh Rp 67,5 Miliar pada 2030 (Rp 28M Baseline 8 Inisiatif + Rp 39,5M Terobosan Agresif 17 Inisiatif = 25 Inisiatif).
    - Menghilangkan potensi defisit operasional Rp 2,4 Miliar melalui penataan model bisnis dan regulasi.
 
 2. **Advokasi Regulasi (3-Pillar Regulatory Justification)**:
@@ -46,3 +46,11 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
    - Selain optimalisasi aset fisik (ruang, gedung, lab, dan venue), roadmap mencakup inisiatif berskala eksponensial (*zero marginal cost of reproduction*):
      - **GovTech Civic SaaS (Inisiatif #19)**: Penugasan STP sebagai pengembang & operator platform SaaS layanan warga terpadu (Solo Civic OS) untuk efisiensi belanja modal IT APBD dan monetisasi API gateway B2B/B2G lintas daerah Solo Raya.
      - **Enterprise AI Agent Exchange (Inisiatif #20)**: Pemanfaatan infrastruktur Sentra AI & Micro Data Center STP sebagai marketplace dan runtime execution environment agen AI industri korporasi regional Solo Raya dengan jaminan kedaulatan data lokal (*local data sovereignty*).
+
+6. **Pilar Smart Hub Berdampak Nyata Sosial & Ekonomi Masyarakat**:
+   - Memastikan STP berfungsi sebagai Smart Hub Inovasi yang membawa dampak langsung bagi warga Surakarta:
+     - **Inklusivitas Digital & Disabilitas (Inisiatif #21)**: Pelatihan AI data labeling & coding untuk keluarga prasejahtera dan difabel.
+     - **Ketahanan Pangan Perkotaan Presisi (Inisiatif #22)**: IoT vertical farming & kultur jaringan penekan inflasi daerah kelurahan.
+     - **Sirkular Ekonomi & E-Waste (Inisiatif #23)**: Daur ulang limbah elektronik & baterai EV berwawasan Net-Zero Emission.
+     - **Akselerasi HAKI Kriya & Batik (Inisiatif #24)**: Proteksi motif budaya, 3D scanning, dan royalti lisensi desain industri.
+     - **HealthTech & Tele-Rehabilitasi Komunitas (Inisiatif #25)**: Fabrikasi suku cadang alat medis presisi dan rujukan tele-fisioterapi warga.

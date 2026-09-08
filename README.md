@@ -21,9 +21,9 @@ Platform ini dibangun khusus sebagai instrumen pengambil keputusan (*executive b
    - Menutup celah fiskal akibat berakhirnya program kemitraan migas Pertamina melalui aktivasi aset tidur (*idle assets*) dan monetisasi model bisnis baru.
 3. **Target Agregat Finansial 2030 (Skala Penuh)**:
    - **Baseline Rutin (8 Inisiatif)**: Rp 28.000.000.000 / tahun.
-   - **Terobosan Agresif Baru (12 Inisiatif)**: Rp 29.500.000.000 / tahun (termasuk Solo GovTech Hub & Solo AI Exchange).
+   - **Terobosan Agresif Baru (17 Inisiatif)**: Rp 39.500.000.000 / tahun (termasuk GovTech Hub, AI Exchange, Inclusive Tech Talent, Urban Agritech, Circular E-Waste, Creative IP Batik, dan HealthTech Hub).
    - **Target Komitmen Minimum**: **Rp 50.500.000.000 / tahun**.
-   - **Total Target Horizon Skala Penuh**: **Rp 57.500.000.000 / tahun**.
+   - **Total Target Horizon Skala Penuh**: **Rp 67.500.000.000 / tahun**.
 
 ---
 
@@ -39,14 +39,14 @@ Model bisnis yang dipaparkan dalam roadmap ini dirancang secara *audit-proof* (a
 
 ---
 
-## 🎯 5 Kluster Strategis & 20 Inisiatif Roadmap
+## 🎯 5 Kluster Strategis & 25 Inisiatif Roadmap
 
 | Kluster | Deskripsi | Jumlah Inisiatif |
 | :--- | :--- | :---: |
 | **🏢 Aset & Properti** | Komersialisasi ruang strategis (Gedung Sembrani, Eks AK-Tekstil, RS Kardiologi, PLUT) | 4 |
-| **🎓 Diklat & Sertifikasi** | Pendirian TUK LSP berlisensi BNSP, Welder Underground, Simulator Crane, Mandatori OPD | 4 |
-| **🤖 AI & Green Tech** | Solo GovTech Hub, Solo AI Exchange, Sentra AI GPU, SPKLU & PLTS Atap | 5 |
-| **🎭 MICE & Komersial** | Naming Rights Kawasan, Bundling MICE, Videotron OOH, Co-working Space | 4 |
+| **🎓 Diklat & Sertifikasi** | Pendirian TUK LSP BNSP, Welder Underground, Simulator Crane, Mandatori OPD, Inclusive Tech Talent | 5 |
+| **🤖 AI & Green Tech** | Solo GovTech Hub, AI Exchange, GPU Cloud, SPKLU PLTS, Urban Agritech, Circular E-Waste, HealthTech | 8 |
+| **🎭 MICE & Komersial** | Naming Rights Kawasan, Bundling MICE, Videotron OOH, Creative IP Batik Lab, Co-working Space | 5 |
 | **🌐 Kemitraan Global** | Kemitraan industri multinasional, SMK Go Global BP3MI, Marketing Agency Agregator | 3 |
 
 ---
