@@ -161,6 +161,96 @@ export default function FinancialSimulationPage() {
         </div>
       </div>
 
+      {/* FORMULA ALOKASI SURPLUS BLUD & DIVIDEN PAD KAS DAERAH */}
+      <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-emerald-50/80 via-white to-blue-50/80 border-y sm:border-x sm:border border-emerald-200/90 shadow-sm space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="space-y-1">
+            <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 uppercase tracking-wider">
+              Dasar Hukum: Permendagri No. 79/2018 Pasal 38–40
+            </span>
+            <h3 className="text-xl sm:text-2xl font-black text-slate-950">
+              Formula Distribusi Surplus Bersih BLUD & Setoran Dividen PAD
+            </h3>
+            <p className="text-xs text-slate-600 max-w-3xl leading-relaxed">
+              Setelah seluruh beban operasional rutin pokok (Rp 8,08 Miliar) terpenuhi 100% mandiri, surplus operasional BLUD dibagi secara akuntabel ke dalam 3 alokasi strategis:
+            </p>
+          </div>
+          <div className="p-3.5 rounded-2xl bg-white border border-emerald-200 shadow-sm text-center md:text-right shrink-0">
+            <div className="text-[10px] uppercase font-bold text-slate-500">Target Dividen PAD 2030:</div>
+            <div className="text-2xl font-black text-emerald-700 font-mono">Rp 7.500.000.000</div>
+            <div className="text-[11px] text-slate-500">Disetor ke Kas Umum Daerah (RKUD)</div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Alokasi 1: 50% Belanja Modal & Reinvestasi */}
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3 flex flex-col justify-between hover:border-blue-400 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-mono">
+                  Porsi 50%
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">Reinvestasi BLUD</span>
+              </div>
+              <h4 className="font-bold text-sm text-slate-900">
+                Belanja Modal, Riset & Pemeliharaan Aset KST
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Pemutakhiran server AI, pemeliharaan gedung Sembrani & AK-Tekstil, peremajaan mesin CNC perkakas, dan ekspansi modul SaaS GovTech.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Proyeksi 2030:</span>
+              <span className="font-mono font-bold text-blue-700">Rp 18,75 Miliar</span>
+            </div>
+          </div>
+
+          {/* Alokasi 2: 30% Cadangan & Subsidi Silang Publik */}
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3 flex flex-col justify-between hover:border-rose-400 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200 font-mono">
+                  Porsi 30%
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">Dampak Sosial SROI</span>
+              </div>
+              <h4 className="font-bold text-sm text-slate-900">
+                Cadangan Operasional & Subsidi Silang Warga
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Membiayai beasiswa vokasi inklusif difabel, uji lab mutu UMKM kuliner/kriya, proteksi HAKI batik, dan tele-rehabilitasi puskesmas.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Proyeksi 2030:</span>
+              <span className="font-mono font-bold text-rose-700">Rp 11,25 Miliar</span>
+            </div>
+          </div>
+
+          {/* Alokasi 3: 20% Dividen PAD Murni ke Kas Daerah */}
+          <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3 flex flex-col justify-between hover:border-emerald-400 transition-all">
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono">
+                  Porsi 20%
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">Setoran Kasda</span>
+              </div>
+              <h4 className="font-bold text-sm text-slate-900">
+                Dividen Kas Daerah (PAD Murni Pemkot Surakarta)
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Setoran dividen laba bersih BLUD ke Rekening Kas Umum Daerah (RKUD) untuk menambah ruang fiskal pembangunan infrastruktur Kota Surakarta.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Proyeksi 2030:</span>
+              <span className="font-mono font-bold text-emerald-700 font-black">Rp 7,50 Miliar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* BELANJA POKOK BREAKDOWN SECTION */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* Card 1: Breakdown */}

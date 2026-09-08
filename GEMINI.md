@@ -24,11 +24,14 @@ Setiap konten kebijakan dan narasi roadmap wajib mengacu pada regulasi legalitas
 ## 2. Prinsip Advokasi Regulasi Eksekutif (Executive Policy Advocacy)
 Platform web dan seluruh dokumen Markdown roadmap tidak sekadar memaparkan "ide komersial", melainkan berfungsi sebagai **Executive Policy Briefing & Justification Tool bagi Walikota**:
 1. **Mengapa Regulasi Baru Dibutuhkan**: Menunjukkan dengan gamblang bahwa regulasi eksisting saat ini terlalu sempit / kaku, sehingga mengunci potensi pendapatan aset strategis (Gedung Sembrani Shopee, Eks AK-Tekstil, RS Kardiologi, Hub PLUT, Naming Rights).
-2. **Paket Regulasi Walikota yang Dimohonkan**: Menyediakan rumusan draf kebijakan konkret (Perwali / SK Walikota / Adendum PKS) yang siap ditandatangani Kepala Daerah.
-3. **Jaminan Kepatuhan Hukum & Audit-Proof**: Menyertakan rujukan pasal regulasi pengaman (Permendagri 79/2018) sehingga Walikota dan TAPD terlindungi dari risiko temuan audit BPK/Inspektorat.
-4. **Dampak Nyata bagi Pemerintah Kota**:
-   - Beban APBD berkurang hingga 0% (kemandirian 99,61% di 2026).
-   - Menghasilkan dividen Pendapatan Asli Daerah (PAD) riil ke Kas Daerah hingga Rp 7,5 Miliar/tahun pada 2030.
+2. **Paket Regulasi Quick Wins (30–90 Hari Pertama)**: Menyediakan rumusan draf kebijakan konkret siap tanda tangan Kepala Daerah (Draf Perwali Pola Tarif Fleksibel BLUD, SK Walikota Penugasan Pengelolaan Aset Terpadu, dan Adendum PKS Tripartit).
+3. **Jaminan Kepatuhan Hukum & Audit-Proof (Safe-Harbor)**:
+   - Rujukan Pasal 34–40 Permendagri No. 79/2018 (Fleksibilitas Tarif Kepala Daerah tanpa Perda retribusi).
+   - Usulan pendampingan hukum formal bersama **Jaksa Pengacara Negara (Kejari Surakarta)** dan audit kepatuhan **BPKP Perwakilan Jawa Tengah** sehingga Walikota terlindungi dari temuan audit BPK/APH.
+4. **Dampak Nyata bagi Kas Daerah & APBD Kota Surakarta**:
+   - Beban subsidi APBD berkurang hingga 0% (kemandirian 99,61% di 2026).
+   - **Formula Alokasi Surplus BLUD**: 50% Reinvestasi & Pemeliharaan Aset KST, 30% Cadangan Likuiditas & Subsidi Silang Warga (SROI), dan **20% Setoran Dividen PAD ke Rekening Kas Umum Daerah (Target Rp 7,5 Miliar/tahun pada 2030)**.
+5. **Kewilayahan Surakarta (5 Kecamatan)**: Dampak sosial dan ekonomi menjangkau merata di 5 Kecamatan (Jebres, Banjarsari, Laweyan, Pasar Kliwon, Serengan).
 
 ---
 

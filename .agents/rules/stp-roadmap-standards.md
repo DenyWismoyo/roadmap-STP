@@ -25,12 +25,14 @@ Platform ini lahir dari sesi pemaparan dokumen PDF kepada **Walikota Surakarta**
 1. **Mandat Walikota & Kemandirian Fiskal**:
    - STP ditargetkan mandiri 100% tanpa APBD, mencapai target baseline minimum Rp 50,5 Miliar hingga skala penuh Rp 67,5 Miliar pada 2030 (Rp 28M Baseline 8 Inisiatif + Rp 39,5M Terobosan Agresif 17 Inisiatif = 25 Inisiatif).
    - Menghilangkan potensi defisit operasional Rp 2,4 Miliar melalui penataan model bisnis dan regulasi.
+   - **Formula Alokasi Surplus BLUD**: 50% Belanja Modal/Pemeliharaan KST, 30% Cadangan & Subsidi Silang Warga (SROI), dan **20% Setoran Dividen PAD ke Kas Daerah (Target Rp 7,5 Miliar/tahun pada 2030)**.
 
-2. **Advokasi Regulasi (3-Pillar Regulatory Justification)**:
-   - Setiap berkas di `content/roadmaps/*.md` wajib menjelaskan:
+2. **Advokasi Regulasi (Executive Action & Safe-Harbor Assurance)**:
+   - Setiap paparan wajib menyajikan:
      1. Keterbatasan regulasi lama.
-     2. Usulan draf regulasi baru untuk Walikota (Perwali / SK / Adendum PKS).
-     3. Payung hukum pengaman kepatuhan audit (Permendagri 79/2018 asas fleksibilitas BLUD).
+     2. **Paket Regulasi Quick Wins (30–90 Hari)**: Draf Perwali Tarif Fleksibel BLUD, SK Penugasan Pengelolaan Aset Komersial, dan Adendum PKS Tripartit siap ditandatangani Walikota.
+     3. **Payung Hukum Pengaman Kepatuhan Audit (Safe-Harbor)**: Rujukan Pasal 34–40 Permendagri 79/2018 serta mekanisme pendampingan formal Jaksa Pengacara Negara (Kejari Surakarta) dan audit tata kelola BPKP Perwakilan Jawa Tengah.
+     4. **Persebaran Kewilayahan (5 Kecamatan se-Surakarta)**: Jebres, Banjarsari, Laweyan, Pasar Kliwon, dan Serengan.
 
 3. **Metadata Frontmatter**:
    - Wajib menyertakan: `id`, `number`, `title`, `category`, `cluster`, `potential_annual_revenue`, `timeline_stage`, `risk_level`, `regulatory_instrument`, `regulatory_urgency`, `pic`, `target_market`, `kpi_target`, `icon`, `summary`.

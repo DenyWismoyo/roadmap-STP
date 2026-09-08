@@ -97,6 +97,85 @@ export default function RegulatoryRoadmapPage() {
         </Link>
       </div>
 
+      {/* QUICK WINS DECISION MATRIX (30-90 HARI PERTAMA) */}
+      <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-6 sm:p-8 bg-amber-50/70 border-y sm:border-x sm:border border-amber-300 shadow-sm space-y-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-amber-200/80">
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-amber-200/80 text-amber-900 text-[10px] font-black uppercase tracking-wider font-mono">
+              Keputusan Mendesak Walikota Surakarta
+            </div>
+            <h3 className="text-xl sm:text-2xl font-black text-slate-950">
+              Paket Regulasi Quick Wins: Siap Ditandatangani dalam 30–90 Hari (2026)
+            </h3>
+            <p className="text-xs text-slate-700">
+              Tiga instrumen kebijakan prioritas yang langsung mengeliminasi potensi defisit Rp 2,4 Miliar pasca-Pertamina dan mengunci pendapatan komitmen Rp 5,2 Miliar di tahun 2026:
+            </p>
+          </div>
+          <span className="px-3 py-1 rounded-full bg-red-100 text-red-800 border border-red-200 text-xs font-bold shrink-0 self-start sm:self-auto">
+            Target: Q3–Q4 2026
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Quick Win 1 */}
+          <div className="p-4 rounded-2xl bg-white border border-amber-200 shadow-sm space-y-2.5 flex flex-col justify-between">
+            <div className="space-y-1.5">
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200">
+                1. Peraturan Walikota (Perwali)
+              </span>
+              <h4 className="text-sm font-bold text-slate-950">
+                Perwali Penyesuaian Pola Tarif Fleksibel BLUD
+              </h4>
+              <p className="text-[11px] text-slate-600 leading-relaxed">
+                Mencabut batas tarif sewa kaku, mengizinkan skema bagi hasil industri (*revenue sharing*), serta menetapkan tarif komersial Gedung Sembrani Shopee dari Rp 110 Jt menjadi Rp 2,5 M/thn.
+              </p>
+            </div>
+            <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Dampak 2026:</span>
+              <span className="font-mono font-bold text-emerald-700">+Rp 2,50 Miliar</span>
+            </div>
+          </div>
+
+          {/* Quick Win 2 */}
+          <div className="p-4 rounded-2xl bg-white border border-amber-200 shadow-sm space-y-2.5 flex flex-col justify-between">
+            <div className="space-y-1.5">
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
+                2. Surat Keputusan (SK) Walikota
+              </span>
+              <h4 className="text-sm font-bold text-slate-950">
+                SK Penugasan Pengelolaan Aset Strategis Terpadu
+              </h4>
+              <p className="text-[11px] text-slate-600 leading-relaxed">
+                Menetapkan UPTD KST STP sebagai pengelola operasional tunggal atas aset strategis Pemkot (Eks AK-Tekstil, RS Kardiologi, dan Fasilitas PLUT) untuk dikomersialkan secara sah.
+              </p>
+            </div>
+            <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Dampak 2026:</span>
+              <span className="font-mono font-bold text-emerald-700">+Rp 1,70 Miliar</span>
+            </div>
+          </div>
+
+          {/* Quick Win 3 */}
+          <div className="p-4 rounded-2xl bg-white border border-amber-200 shadow-sm space-y-2.5 flex flex-col justify-between">
+            <div className="space-y-1.5">
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200">
+                3. Adendum Perjanjian (PKS)
+              </span>
+              <h4 className="text-sm font-bold text-slate-950">
+                Adendum PKS Tripartit Komersial Mitra Strategis
+              </h4>
+              <p className="text-[11px] text-slate-600 leading-relaxed">
+                Restrukturisasi klausul kerjasama lama yang merugikan daerah menjadi kemitraan bagi hasil komersial berjangka panjang dengan Shopee, mitra manufaktur, dan perbankan.
+              </p>
+            </div>
+            <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Dampak 2026:</span>
+              <span className="font-mono font-bold text-emerald-700">+Rp 1,00 Miliar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 4 WAVES OF REGULATORY ENABLERS */}
       <div className="space-y-8">
         <div className="space-y-1">
@@ -225,7 +304,7 @@ export default function RegulatoryRoadmapPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs leading-relaxed text-slate-600">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs leading-relaxed text-slate-600">
           <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
             <div className="font-bold text-blue-700 text-sm">
               Permendagri No. 79/2018 tentang Pola Pengelolaan BLUD
@@ -241,6 +320,16 @@ export default function RegulatoryRoadmapPage() {
             </div>
             <p>
               Pasal 386–390 mengatur inovasi daerah dalam rangka peningkatan efisiensi, perbaikan efektivitas, perbaikan kualitas pelayanan, dan penambahan pendapatan daerah tanpa adanya sanksi hukum apabila inovasi tersebut bertujuan untuk kepentingan umum dan peningkatan kemandirian fiskal.
+            </p>
+          </div>
+
+          <div className="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2">
+            <div className="font-bold text-amber-800 text-sm flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-amber-700" />
+              Safe-Harbor: Pendampingan JPN Kejari & BPKP
+            </div>
+            <p className="text-slate-700">
+              Guna melindungi Walikota dan TAPD dari risiko temuan audit BPK RI atau APH, seluruh paket Perwali dan adendum PKS komersial dikawal melalui permohonan <em>Legal Assistance / Legal Opinion</em> Jaksa Pengacara Negara (Kejari Surakarta) serta reviu tata kelola kepatuhan BPKP Perwakilan Jawa Tengah.
             </p>
           </div>
         </div>

@@ -14,11 +14,14 @@ import {
   Gavel,
   HeartHandshake,
   ArrowUpRight,
+  Presentation,
 } from "lucide-react";
+import ExecutivePresentationModal from "@/components/ExecutivePresentationModal";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isPresentationOpen, setIsPresentationOpen] = useState(false);
 
   const navLinks = [
     { href: "/", label: "Dashboard", icon: Sparkles },
@@ -81,12 +84,21 @@ export default function Navbar() {
 
         {/* Right Actions: Minimal Target & Quick CTA */}
         <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={() => setIsPresentationOpen(true)}
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300/80 font-bold text-xs transition-all shadow-xs active:scale-95"
+            title="Buka Mode Paparan Rapat Walikota"
+          >
+            <Presentation className="w-3.5 h-3.5 text-amber-700" />
+            <span className="hidden sm:inline">Mode Paparan</span>
+          </button>
+
           <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-[11px] font-semibold">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Target 2030: Rp 50,5 M
+            Target: Rp 50,5 M
           </div>
 
           <Link
@@ -118,6 +130,23 @@ export default function Navbar() {
             transition={{ duration: 0.2 }}
             className="lg:hidden border-t border-slate-200 bg-white/98 backdrop-blur-xl px-4 py-3 space-y-1 shadow-lg overflow-hidden"
           >
+            {/* Quick Presentation Button in Drawer */}
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                setIsPresentationOpen(true);
+              }}
+              className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 font-bold text-xs sm:text-sm transition-all mb-2 shadow-xs"
+            >
+              <div className="flex items-center gap-2.5">
+                <Presentation className="w-4 h-4 text-amber-700" />
+                <span>Mode Paparan Walikota</span>
+              </div>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-200/80 text-amber-950 font-bold">
+                5 Slide Inti
+              </span>
+            </button>
+
             {navLinks.map((link) => {
               const Icon = link.icon;
               const isActive =
@@ -156,6 +185,12 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Full-Screen Executive Presentation Modal */}
+      <ExecutivePresentationModal
+        isOpen={isPresentationOpen}
+        onClose={() => setIsPresentationOpen(false)}
+      />
     </header>
   );
 }

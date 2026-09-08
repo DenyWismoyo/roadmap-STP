@@ -435,6 +435,218 @@ export default function PublicImpactPage() {
         </div>
       </div>
 
+      {/* 5 KECAMATAN GEOGRAPHIC DISTRIBUTION OF CIVIC IMPACT */}
+      <div className="space-y-6">
+        <div className="space-y-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-blue-700">
+            <Users className="w-3.5 h-3.5 text-blue-600" />
+            Persebaran Teritorial: Menjangkau 54 Kelurahan se-Kota Surakarta
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
+            Sebaran Manfaat Nyata di 5 Kecamatan Kota Surakarta
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-500">
+            Solo Technopark bukan menara gading di Jebres semata, melainkan mesin penggerak ekonomi kerakyatan dan sosial yang hadir di seluruh penjuru Kota Bengawan.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Kecamatan Jebres */}
+          <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm space-y-4 hover:border-blue-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                  Kecamatan Jebres
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">
+                  18.500+ Penerima
+                </span>
+              </div>
+              <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                Kampus Utama Inovasi & Manufaktur Presisi
+              </h3>
+              <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
+                  <span>Beasiswa Vokasi 100% Difabel & Dhuafa (Inisiatif #21)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
+                  <span>Open Living Lab Mesin Bubut CNC & FabLab Industri (#3, #15)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0 mt-0.5" />
+                  <span>Sentra Komputasi Enterprise AI & Solo Civic OS (#19, #20)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Nilai Sosial:</span>
+              <span className="font-mono font-bold text-emerald-700">Rp 38 Miliar/thn</span>
+            </div>
+          </div>
+
+          {/* Kecamatan Banjarsari */}
+          <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm space-y-4 hover:border-emerald-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  Kecamatan Banjarsari
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">
+                  14.200+ Penerima
+                </span>
+              </div>
+              <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                Inkubasi Kuliner & Sirkular Ekonomi E-Waste
+              </h3>
+              <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Inkubasi Kuliner Modern & Kurasi Sertifikasi Halal (#13)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Sentra Daur Ulang E-Waste & Pemulihan Baterai EV (#23)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Urban Agritech Pekarangan Stunting Kelurahan (#22)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Nilai Sosial:</span>
+              <span className="font-mono font-bold text-emerald-700">Rp 27 Miliar/thn</span>
+            </div>
+          </div>
+
+          {/* Kecamatan Laweyan */}
+          <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm space-y-4 hover:border-amber-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+                  Kecamatan Laweyan
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">
+                  8.600+ Penerima
+                </span>
+              </div>
+              <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                Sentra HAKI Batik & Mutu Tekstil Hijau
+              </h3>
+              <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                  <span>Fasilitasi HAKI Motif Batik Gratis di Muka (#24)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                  <span>Lab Uji Mutu Tekstil Ramah Lingkungan (#7)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
+                  <span>3D Digital Scanning Motif & Lisensi IP Budaya (#24)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Nilai Sosial:</span>
+              <span className="font-mono font-bold text-emerald-700">Rp 23 Miliar/thn</span>
+            </div>
+          </div>
+
+          {/* Kecamatan Pasar Kliwon */}
+          <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm space-y-4 hover:border-purple-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">
+                  Kecamatan Pasar Kliwon
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">
+                  9.800+ Penerima
+                </span>
+              </div>
+              <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                Live-Commerce Hub & Onboarding E-Katalog
+              </h3>
+              <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-purple-600 shrink-0 mt-0.5" />
+                  <span>Studio Live-Commerce Terpadu PLUT Surakarta (#14)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-purple-600 shrink-0 mt-0.5" />
+                  <span>Onboarding Pengrajin Kriya ke E-Katalog Pemkot (#14)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-purple-600 shrink-0 mt-0.5" />
+                  <span>Inkubasi Wirausaha Santri & UMKM Digital Mandiri (#13)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Nilai Sosial:</span>
+              <span className="font-mono font-bold text-emerald-700">Rp 21 Miliar/thn</span>
+            </div>
+          </div>
+
+          {/* Kecamatan Serengan */}
+          <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-white border-y sm:border-x sm:border border-slate-200/90 shadow-sm space-y-4 hover:border-rose-400 hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">
+                  Kecamatan Serengan
+                </span>
+                <span className="text-[10px] font-bold text-slate-500 font-mono">
+                  6.400+ Penerima
+                </span>
+              </div>
+              <h3 className="font-bold text-sm text-slate-900 leading-snug">
+                Talenta Digital & Manufaktur Alat Medis
+              </h3>
+              <ul className="text-xs text-slate-600 space-y-1.5 pt-1">
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-rose-600 shrink-0 mt-0.5" />
+                  <span>Fabrikasi Suku Cadang Kaki Palsu / Ortotik-Prostetik (#25)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-rose-600 shrink-0 mt-0.5" />
+                  <span>Tele-Rehabilitasi Fisioterapi Gratis ke Puskesmas (#25)</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-rose-600 shrink-0 mt-0.5" />
+                  <span>Pelatihan Pemuda AI Data Labeling & Coding Pemula (#21)</span>
+                </li>
+              </ul>
+            </div>
+            <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <span className="text-slate-500">Nilai Sosial:</span>
+              <span className="font-mono font-bold text-emerald-700">Rp 15 Miliar/thn</span>
+            </div>
+          </div>
+
+          {/* Ringkasan Agregat 5 Kecamatan */}
+          <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-2xl p-5 bg-gradient-to-br from-slate-900 to-blue-950 text-white border-y sm:border-x sm:border border-slate-800 shadow-sm space-y-4 flex flex-col justify-between">
+            <div className="space-y-2">
+              <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-blue-500/30 text-blue-200 border border-blue-400/30">
+                KONSOLIDASI SELURUH KOTA
+              </span>
+              <h3 className="font-black text-lg text-white">
+                57.500+ Warga & UMKM Kota Surakarta
+              </h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Mekanisme subsidi silang memastikan setiap rupiah surplus korporat BLUD kembali mengalir sebagai proteksi ekonomi dan sosial riil bagi warga Kota Solo.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+              <span className="text-slate-400">Total Nilai SROI:</span>
+              <span className="font-mono font-black text-emerald-400 text-sm">Rp 124 Miliar/thn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* 5 OFFICIAL MARKDOWN DOSSIERS DIRECTORY */}
       <div className="space-y-6">
         <div className="space-y-1">
