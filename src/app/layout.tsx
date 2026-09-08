@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     "Kawasan Sains dan Teknologi",
     "Paparan Walikota",
   ],
+  icons: {
+    icon: "/stp.svg",
+    shortcut: "/stp.svg",
+    apple: "/stp.svg",
+  },
 };
 
 export default function RootLayout({

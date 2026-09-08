@@ -310,10 +310,12 @@ export default function ExecutivePresentationModal({
         >
           {/* Top Bar Header */}
           <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between gap-4 bg-slate-50/80">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shadow-sm">
-                <Presentation className="w-4 h-4" />
-              </div>
+            <div className="flex items-center gap-3">
+              <img
+                src="/stp.svg"
+                alt="Solo Technopark"
+                className="h-8 sm:h-9 w-auto object-contain"
+              />
               <div>
                 <span className="text-xs font-bold text-blue-700 tracking-wider uppercase block">
                   Sidang Paparan Walikota Surakarta
@@ -330,16 +332,16 @@ export default function ExecutivePresentationModal({
                 className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs border border-slate-300 transition-colors"
                 title="Cetak Naskah / Ekspor PDF"
               >
-                <Printer className="w-3.5 h-3.5" />
+                <Printer className="w-3.5 h-3.5 text-slate-600" />
                 Cetak Lembar Disposisi
               </button>
 
               <button
                 onClick={onClose}
-                className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-200 transition-colors"
+                className="p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-200 transition-colors"
                 aria-label="Tutup"
               >
-                <X className="w-5 h-5" />
+                <X className="w-5 h-5 text-slate-600" />
               </button>
             </div>
           </div>
@@ -389,7 +391,7 @@ export default function ExecutivePresentationModal({
               disabled={currentSlide === 0}
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 hover:bg-slate-200 disabled:opacity-30 disabled:pointer-events-none transition-colors"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-4 h-4 text-slate-600" />
               Sebelumnya
             </button>
 
@@ -403,7 +405,7 @@ export default function ExecutivePresentationModal({
                 className="inline-flex items-center gap-1 px-4 py-1.5 rounded-lg text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white shadow-xs transition-colors"
               >
                 Lanjut
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 text-white" />
               </button>
             ) : (
               <button

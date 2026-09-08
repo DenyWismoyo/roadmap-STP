@@ -12,11 +12,11 @@ export default function Footer() {
           {/* Col 1: About & Institutional */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-blue-600 via-indigo-600 to-sky-500 p-0.5 shadow-md shadow-blue-500/20 flex items-center justify-center">
-                <div className="w-full h-full bg-white rounded-[6px] flex items-center justify-center">
-                  <span className="font-black text-sm bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">STP</span>
-                </div>
-              </div>
+              <img
+                src="/stp.svg"
+                alt="Solo Technopark"
+                className="h-9 w-auto object-contain"
+              />
               <span className="font-black tracking-wider text-base sm:text-lg text-slate-900">
                 UPTD KST SOLO TECHNOPARK
               </span>
@@ -46,28 +46,28 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-600">
               <li>
-                <Link href="/roadmap?cluster=Aset+%26+Properti" className="hover:text-blue-600 transition-colors flex items-center gap-1">
-                  Unlocking Aset Idle (Rp 6,5 M) <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                <Link href="/roadmap?cluster=Aset+%26+Properti" className="hover:text-blue-600 transition-colors flex items-center gap-1 group">
+                  Unlocking Aset Idle (Rp 6,5 M) <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-blue-600 transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link href="/roadmap?cluster=Diklat+%26+Sertifikasi" className="hover:text-blue-600 transition-colors flex items-center gap-1">
-                  Diklat & Hub TUK BNSP (Rp 11,5 M) <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                <Link href="/roadmap?cluster=Diklat+%26+Sertifikasi" className="hover:text-blue-600 transition-colors flex items-center gap-1 group">
+                  Diklat & Hub TUK BNSP (Rp 11,5 M) <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-blue-600 transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link href="/roadmap?cluster=AI+%26+Green+Tech" className="hover:text-blue-600 transition-colors flex items-center gap-1">
-                  GovTech, AI & Green Tech (Rp 16,0 M) <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                <Link href="/roadmap?cluster=AI+%26+Green+Tech" className="hover:text-blue-600 transition-colors flex items-center gap-1 group">
+                  GovTech, AI & Green Tech (Rp 16,0 M) <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-blue-600 transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link href="/roadmap?cluster=MICE+%26+Komersial" className="hover:text-blue-600 transition-colors flex items-center gap-1">
-                  Naming Rights & MICE (Rp 9,5 M) <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                <Link href="/roadmap?cluster=MICE+%26+Komersial" className="hover:text-blue-600 transition-colors flex items-center gap-1 group">
+                  Naming Rights & MICE (Rp 9,5 M) <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-blue-600 transition-colors" />
                 </Link>
               </li>
               <li>
-                <Link href="/roadmap?cluster=Kemitraan+Global" className="hover:text-blue-600 transition-colors flex items-center gap-1">
-                  SMK Go Global BP3MI (Rp 5,0 M) <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                <Link href="/roadmap?cluster=Kemitraan+Global" className="hover:text-blue-600 transition-colors flex items-center gap-1 group">
+                  SMK Go Global BP3MI (Rp 5,0 M) <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-blue-600 transition-colors" />
                 </Link>
               </li>
               <li className="pt-2 border-t border-slate-200 space-y-1.5">

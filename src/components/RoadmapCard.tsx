@@ -141,7 +141,7 @@ export default function RoadmapCard({ roadmap, index = 0 }: Props) {
         {/* PIC & Action Button */}
         <div className="flex items-center justify-between pt-1">
           <div className="text-[11px] text-slate-500 flex items-center gap-1.5 max-w-[65%] truncate">
-            <UserCheck className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+            <UserCheck className="w-3.5 h-3.5 text-slate-500 shrink-0" />
             <span className="truncate">{roadmap.pic}</span>
           </div>
 
@@ -149,7 +149,7 @@ export default function RoadmapCard({ roadmap, index = 0 }: Props) {
             href={`/roadmap/${roadmap.slug}`}
             className="inline-flex items-center gap-1 text-xs font-bold text-blue-600 hover:text-blue-800 transition-colors group-hover:translate-x-0.5 transition-transform"
           >
-            Pelajari <ArrowRight className="w-3.5 h-3.5" />
+            Pelajari <ArrowRight className="w-3.5 h-3.5 text-blue-600" />
           </Link>
         </div>
       </div>

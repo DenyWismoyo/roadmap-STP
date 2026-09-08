@@ -78,7 +78,7 @@ export default function InstitutionalPage() {
       <div className="space-y-6">
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">
-            <Scale className="w-4 h-4" />
+            <Scale className="w-4 h-4 text-blue-600" />
             Landasan Hukum Pelaksanaan
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-950">

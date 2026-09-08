@@ -218,7 +218,7 @@ export default function ScenarioSimulator() {
               onClick={triggerCelebration}
               className="text-xs text-amber-700 hover:text-amber-800 font-bold flex items-center gap-1 active:scale-95 transition-transform"
             >
-              <Sparkles className="w-3.5 h-3.5" />
+              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
               Rayakan Target 2030
             </button>
           )}

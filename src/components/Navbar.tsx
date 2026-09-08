@@ -37,13 +37,11 @@ export default function Navbar() {
       <div className="app-container h-14 sm:h-16 flex items-center justify-between gap-4">
         {/* Brand Logo & Compact Title */}
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-tr from-blue-700 via-blue-600 to-indigo-600 p-0.5 shadow-sm flex items-center justify-center group-hover:scale-105 transition-transform">
-            <div className="w-full h-full bg-white rounded-[6px] flex items-center justify-center">
-              <span className="font-black text-xs sm:text-sm bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent">
-                STP
-              </span>
-            </div>
-          </div>
+          <img
+            src="/stp.svg"
+            alt="Solo Technopark"
+            className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform"
+          />
           <div className="flex items-center gap-2">
             <span className="font-black tracking-tight text-sm sm:text-base text-slate-900 group-hover:text-blue-600 transition-colors">
               Solo Technopark
@@ -73,7 +71,7 @@ export default function Navbar() {
               >
                 <Icon
                   className={`w-3.5 h-3.5 ${
-                    isActive ? "text-blue-600" : "text-slate-400"
+                    isActive ? "text-blue-600" : "text-slate-500"
                   }`}
                 />
                 {link.label}
@@ -166,7 +164,7 @@ export default function Navbar() {
                   <div className="flex items-center gap-2.5">
                     <Icon
                       className={`w-4 h-4 ${
-                        isActive ? "text-blue-600" : "text-slate-400"
+                        isActive ? "text-blue-600" : "text-slate-500"
                       }`}
                     />
                     {link.label}

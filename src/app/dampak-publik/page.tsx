@@ -138,7 +138,7 @@ export default function PublicImpactPage() {
           <div className="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-blue-100 text-blue-800 text-[10px] font-bold uppercase tracking-wider">
-                <Building2 className="w-3 h-3" />
+                <Building2 className="w-3.5 h-3.5 text-blue-700 shrink-0" />
                 1. Mesin Komersial BLUD
               </div>
               <h4 className="text-base font-bold text-slate-900">Surplus B2B Korporasi & Aset</h4>
@@ -196,7 +196,7 @@ export default function PublicImpactPage() {
           <div className="p-5 rounded-2xl bg-rose-50/70 border border-rose-200 space-y-3 flex flex-col justify-between">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-rose-100 text-rose-800 text-[10px] font-bold uppercase tracking-wider">
-                <HeartHandshake className="w-3 h-3" />
+                <HeartHandshake className="w-3.5 h-3.5 text-rose-700 shrink-0" />
                 3. Dampak Nyata di Surakarta
               </div>
               <h4 className="text-base font-bold text-slate-900">4 Sektor Non-Profit Publik</h4>
@@ -352,7 +352,7 @@ export default function PublicImpactPage() {
                         <BookOpen className="w-3.5 h-3.5 text-blue-600" />
                         Buka Dokumen Naskah Lengkap (.md)
                       </span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 text-blue-600 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -693,7 +693,7 @@ export default function PublicImpactPage() {
                   {doc.annual_social_value ? formatRupiah(doc.annual_social_value, true) : "Kerangka SROI"}
                 </span>
                 <span className="text-blue-600 font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Buka Naskah <ArrowRight className="w-3.5 h-3.5" />
+                  Buka Naskah <ArrowRight className="w-3.5 h-3.5 text-blue-600" />
                 </span>
               </div>
             </Link>
@@ -705,7 +705,7 @@ export default function PublicImpactPage() {
       <div className="-mx-4 sm:mx-0 rounded-none sm:rounded-3xl p-6 sm:p-10 bg-gradient-to-r from-blue-50 via-white to-rose-50 border-y sm:border-x sm:border border-slate-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">
           <div className="inline-flex items-center gap-2 text-xs font-bold text-amber-800 uppercase tracking-wider">
-            <Gavel className="w-4 h-4" />
+            <Gavel className="w-4 h-4 text-amber-700" />
             Landasan Kebijakan Kepala Daerah
           </div>
           <h3 className="text-xl sm:text-2xl font-black text-slate-950">
@@ -721,14 +721,14 @@ export default function PublicImpactPage() {
             href="/regulasi"
             className="px-6 py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-black text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
           >
-            <Gavel className="w-4 h-4" />
+            <Gavel className="w-4 h-4 text-white" />
             Paket Regulasi Walikota
           </Link>
           <Link
             href="/roadmap"
             className="px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-xs uppercase tracking-wider border border-slate-200 transition-all flex items-center gap-2 shadow-sm"
           >
-            <Layers className="w-4 h-4" />
+            <Layers className="w-4 h-4 text-slate-700" />
             25 Inisiatif Roadmap
           </Link>
         </div>

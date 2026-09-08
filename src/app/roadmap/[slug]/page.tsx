@@ -185,7 +185,7 @@ export default async function RoadmapDetailPage({ params }: Props) {
             href="/regulasi"
             className="text-[11px] font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition-colors self-start sm:self-auto"
           >
-            Lihat Paket Regulasi Walikota <ArrowRight className="w-3 h-3" />
+            Lihat Paket Regulasi Walikota <ArrowRight className="w-3 h-3 text-blue-600" />
           </Link>
         </div>
 
@@ -214,7 +214,7 @@ export default async function RoadmapDetailPage({ params }: Props) {
             href={`/roadmap/${prevRoadmap.slug}`}
             className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-md transition-all group flex items-center gap-3"
           >
-            <ArrowLeft className="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:-translate-x-1 transition-transform" />
+            <ArrowLeft className="w-5 h-5 text-slate-500 group-hover:text-blue-600 group-hover:-translate-x-1 transition-transform" />
             <div>
               <div className="text-[11px] text-slate-500 uppercase font-bold">Inisiatif Sebelumnya</div>
               <div className="text-xs font-bold text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">
@@ -237,7 +237,7 @@ export default async function RoadmapDetailPage({ params }: Props) {
                 #{nextRoadmap.number}. {nextRoadmap.title}
               </div>
             </div>
-            <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-transform shrink-0 ml-3" />
+            <ArrowRight className="w-5 h-5 text-slate-500 group-hover:text-blue-600 group-hover:translate-x-1 transition-transform shrink-0 ml-3" />
           </Link>
         )}
       </div>

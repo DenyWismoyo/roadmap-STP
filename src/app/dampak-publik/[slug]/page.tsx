@@ -160,7 +160,7 @@ export default async function PublicImpactDetailPage({ params }: Props) {
             href={`/dampak-publik/${prevDoc.slug}`}
             className="w-full sm:w-auto p-4 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200 hover:border-rose-400 hover:shadow-md transition-all group flex items-center gap-3 text-left"
           >
-            <ArrowLeft className="w-4 h-4 text-slate-400 group-hover:text-rose-600 transition-colors" />
+            <ArrowLeft className="w-4 h-4 text-slate-500 group-hover:text-rose-600 transition-colors" />
             <div>
               <div className="text-[10px] text-slate-500 uppercase font-bold">Sebelumnya</div>
               <div className="text-xs font-bold text-slate-900 group-hover:text-rose-700 transition-colors line-clamp-1">
@@ -183,7 +183,7 @@ export default async function PublicImpactDetailPage({ params }: Props) {
                 #{nextDoc.number}: {nextDoc.title}
               </div>
             </div>
-            <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-rose-600 transition-colors" />
+            <ArrowRight className="w-4 h-4 text-slate-500 group-hover:text-rose-600 transition-colors" />
           </Link>
         ) : (
           <div />

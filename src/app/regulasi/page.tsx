@@ -254,7 +254,7 @@ export default function RegulatoryRoadmapPage() {
                     <div className="space-y-2 text-xs pt-1">
                       <div className="p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-slate-700 space-y-1">
                         <div className="text-[10px] font-bold text-rose-800 uppercase flex items-center gap-1">
-                          <AlertTriangle className="w-3 h-3" /> Hambatan Regulasi Eksisting:
+                          <AlertTriangle className="w-3.5 h-3.5 text-rose-600 shrink-0" /> Hambatan Regulasi Eksisting:
                         </div>
                         <p className="text-[11px] text-slate-600 leading-relaxed">
                           {inst.hurdle}
@@ -263,7 +263,7 @@ export default function RegulatoryRoadmapPage() {
 
                       <div className="p-2.5 rounded-xl bg-blue-50 border border-blue-200 text-slate-700 space-y-1">
                         <div className="text-[10px] font-bold text-blue-800 uppercase flex items-center gap-1">
-                          <ShieldCheck className="w-3 h-3" /> Payung Hukum Pengaman:
+                          <ShieldCheck className="w-3.5 h-3.5 text-blue-600 shrink-0" /> Payung Hukum Pengaman:
                         </div>
                         <p className="text-[11px] text-slate-600 leading-relaxed">
                           {inst.legalShield}
@@ -278,7 +278,7 @@ export default function RegulatoryRoadmapPage() {
                       href="/roadmap"
                       className="text-blue-600 hover:text-blue-800 font-bold inline-flex items-center gap-1 shrink-0"
                     >
-                      Detail <ArrowRight className="w-3 h-3" />
+                      Detail <ArrowRight className="w-3 h-3 text-blue-600" />
                     </Link>
                   </div>
                 </div>

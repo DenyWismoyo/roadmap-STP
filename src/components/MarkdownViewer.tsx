@@ -93,7 +93,7 @@ export default function MarkdownViewer({ content, showDocumentHeader = true }: P
                 <span>Naskah Kebijakan Eksekutif</span>
                 <span className="text-slate-300">•</span>
                 <span className="flex items-center gap-1 text-slate-500">
-                  <BookOpen className="w-3 h-3 text-slate-400" />
+                  <BookOpen className="w-3.5 h-3.5 text-slate-500" />
                   ~{readingTimeMinutes} mnt baca ({wordCount} kata)
                 </span>
               </div>
